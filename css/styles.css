@@ -1,7 +1,8 @@
 body {
   font-family: 'Noto Sans', sans-serif;
   font-family: 'Sofia Sans', sans-serif;
-  color: #e1e1e3; }
+  color: #e1e1e3;
+  background-color: red; }
 
 .section {
   height: auto; }
@@ -63,9 +64,6 @@ body {
 
 .container {
   max-width: 1000px; }
-
-body {
-  background-color: #18191a; }
 
 .section p,
 .section li {
