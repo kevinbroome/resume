@@ -88,7 +88,8 @@ body {
     width: 120%;
     height: 308px;
     object-fit: cover;
-    margin-left: -10%; }
+    margin-left: -10%;
+    mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)); }
   .section .main .heading {
     font-family: 'Sofia Sans', sans-serif;
     font-size: 2.5rem;
@@ -143,7 +144,7 @@ body {
 
 @media only screen and (max-width: 900px) {
   .section .info-bar {
-    padding-top: 3rem;
+    padding-top: 1rem;
     margin-inline: -14.5%;
     width: 130%; }
     .section .info-bar:hover {
