@@ -7,12 +7,13 @@ body {
   --mid-tone: #242526; }
 
 .shade-header {
-  background: linear-gradient(var(--darkest), #18191ac5, #18191a00); }
+  background: linear-gradient(var(--darkest), #18191ae1, #18191ac5, #18191a00); }
 
 .info-bar {
   position: sticky;
   top: 0;
   margin-top: 40vh;
+  padding-bottom: 7rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,6 +82,7 @@ body {
   height: 0.125rem; }
 
 .section .main {
+  font-size: 1.25rem;
   margin-inline: auto;
   overflow: hidden;
   margin-top: -50rem;
@@ -97,7 +99,18 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
-    margin-top: 14rem; }
+    margin-top: 5rem;
+    color: var(--text-color); }
+    .section .main .about-me .skill-tape {
+      width: 500%;
+      animation: animate 200s linear infinite;
+      animation-delay: -110s; }
+
+@keyframes animate {
+  0% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateX(-100%); } }
   .section .main .heading {
     font-family: 'Sofia Sans', sans-serif;
     font-size: 2.5rem;
