@@ -5,6 +5,8 @@ body {
   --heading-color: #ffffff;
   --darkest: #18191a;
   --mid-tone: #242526;
+  --light-tone: #505253;
+  --accent: #a52a2a;
 }
 
 //Info Bar Design
@@ -23,11 +25,11 @@ body {
   z-index: 1;
   height: 10rem;
 
-  /* .left,
+  .left,
   .right,
   .socials {
     animation: fadeIn 7s;
-  }  */
+  }
 
   @keyframes fadeIn {
     0% {
@@ -60,6 +62,22 @@ body {
     }
   }
 
+  a {
+    color: var(--heading-color);
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 50%;
+
+    &:hover {
+      color: var(--accent);
+      text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
+    }
+
+    &:visited {
+      color: var(--heading-color);
+    }
+  }
+
   .socials {
     margin-top: -2rem;
     display: flex;
@@ -68,21 +86,8 @@ body {
     gap: .8rem;
     z-index: 100;
 
-  }
-
-  a {
-    color: var(--text-color);
-    cursor: pointer;
-    padding: 1rem;
-    border-radius: 50%;
-
-    &:hover {
-      color: #fff;
-      text-shadow: 0 0 15px #ff0000;
-    }
-
-    &:visited {
-      color: var(--text-color);
+    a:hover {
+      color: var(--accent);
     }
   }
 }
@@ -90,7 +95,7 @@ body {
 
 //Body
 body {
-  background-color: #18191a;
+  background-color: var(--darkest);
 }
 
 .section {
@@ -119,10 +124,11 @@ body {
     overflow: hidden;
     margin-top: -50rem;
     background-color: #242526;
+    color: var(--text-color);
 
     .splash-page {
       height: 75rem;
-      background-color: brown;
+      background-color: #a52a2a;
     }
 
     .card {
@@ -136,35 +142,34 @@ body {
       flex-direction: column;
       justify-content: center;
       gap: 2rem;
-      margin-top: 5rem;
-      color: var(--text-color);
+      margin-top: 8rem;
+    }
 
-      .skill-tape {
-        width: 500%;
-        animation: animate 200s linear infinite;
-        animation-delay: -110s;
-      }
-
-      @keyframes animate {
-        0% {
-          transform: translateX(100%);
-        }
-
-        100% {
-          transform: translateX(-100%);
-        }
-      }
+    .experience {
+      background-color: #ff0000;
     }
 
     .heading {
       font-family: 'Sofia Sans', sans-serif;
       font-size: 2.5rem;
       font-weight: 700;
-      margin-bottom: -0.5rem;
-      padding: 0.1rem 1rem;
-      position: relative;
-      left: -1rem;
       z-index: 0;
+      width: fit-content;
+      background: linear-gradient(45deg, var(--text-color), var(--accent));
+      background-size: 800%;
+      background-clip: text;
+      animation: head-animate 20s alternate infinite;
+      color: transparent;
+    }
+
+    @keyframes head-animate {
+      from {
+        background-position: left;
+      }
+
+      to {
+        background-position: right;
+      }
     }
 
     .space {
@@ -214,8 +219,24 @@ body {
       display: grid;
       grid-template-rows: repeat(4, 1fr);
       grid-template-columns: 1fr 1fr;
-      row-gap: 0.5rem;
+      row-gap: 1rem;
       column-gap: 1rem;
+    }
+
+    .skill-reveal {
+      animation: reveal 1s linear;
+    }
+
+    @keyframes reveal {
+      0% {
+        transform: translate(0, 100%);
+        opacity: (0);
+      }
+
+      100% {
+        transform: translate(0, 0%);
+        opacity: (1);
+      }
     }
   }
 }
