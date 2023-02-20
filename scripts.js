@@ -7,9 +7,9 @@ const shadeObserver = new IntersectionObserver(function (
 ) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
-      infoBar.classList.add('shade-header');
+      infoBar.classList.add("shade-header");
     } else {
-      infoBar.classList.remove('shade-header');
+      infoBar.classList.remove("shade-header");
     }
   });
 });
@@ -27,9 +27,9 @@ const revealObserver = new IntersectionObserver(function (
 ) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
-      skillReveal.classList.add('skill-reveal');
+      skillReveal.classList.add("skill-reveal");
     } else {
-      skillReveal.classList.remove('skill-reveal');
+      skillReveal.classList.remove("skill-reveal");
     }
   });
 },

@@ -133,7 +133,7 @@ body {
 
     .card {
       margin-inline: auto;
-      padding-inline: clamp(0.625rem, 5%, 10%);
+      padding-inline: clamp(0.625rem, 9%, 10%);
     }
 
     .about-me {
@@ -142,11 +142,22 @@ body {
       flex-direction: column;
       justify-content: center;
       gap: 2rem;
-      margin-top: 8rem;
+      margin-top: 9rem;
     }
 
     .experience {
-      background-color: #ff0000;
+      background-image: url("/resume/kiwihug-MS9Tnh3if1o-unsplash.jpg");
+      background-size: cover;
+      padding-block: 8rem;
+      color: var(--darkest);
+
+      .heading {
+        background: linear-gradient(45deg, var(--darkest), #072222);
+        background-size: 800%;
+        background-clip: text;
+        animation: head-animate 20s alternate infinite;
+        color: transparent;
+      }
     }
 
     .heading {
