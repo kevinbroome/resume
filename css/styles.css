@@ -80,7 +80,7 @@ body {
   text-align: left; }
 
 .section .divider {
-  background: linear-gradient(to right, #18191a, #18191a00);
+  background: linear-gradient(to right, #a52a2a, #a52a2a00);
   border: 0;
   height: 0.125rem; }
 
@@ -109,8 +109,11 @@ body {
     background-size: cover;
     padding-block: 8rem;
     color: var(--darkest); }
+    .section .main .experience p,
+    .section .main .experience li {
+      font-weight: 500; }
     .section .main .experience .heading {
-      background: linear-gradient(45deg, var(--darkest), #072222);
+      background: linear-gradient(45deg, var(--darkest), var(--accent));
       background-size: 800%;
       background-clip: text;
       animation: head-animate 20s alternate infinite;

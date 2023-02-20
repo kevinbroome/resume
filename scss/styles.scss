@@ -113,7 +113,7 @@ body {
   }
 
   .divider {
-    background: linear-gradient(to right, #18191a, #18191a00);
+    background: linear-gradient(to right, #a52a2a, #a52a2a00);
     border: 0;
     height: 0.125rem;
   }
@@ -151,8 +151,13 @@ body {
       padding-block: 8rem;
       color: var(--darkest);
 
+      p,
+      li {
+        font-weight: 500;
+      }
+
       .heading {
-        background: linear-gradient(45deg, var(--darkest), #072222);
+        background: linear-gradient(45deg, var(--darkest), var(--accent));
         background-size: 800%;
         background-clip: text;
         animation: head-animate 20s alternate infinite;
