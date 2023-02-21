@@ -1,5 +1,9 @@
-const infoBar = document.querySelector(".info-bar")
+
 const splashPage = document.querySelector(".splash-page")
+
+//skill grid and shading anim
+const infoBar = document.querySelector(".info-bar")
+const skillReveal = document.querySelector(".skill-grid")
 
 const shadeObserver = new IntersectionObserver(function (
   entries,
@@ -8,6 +12,7 @@ const shadeObserver = new IntersectionObserver(function (
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
       infoBar.classList.add("shade-header");
+      skillReveal.classList.add("skill-reveal");
     } else {
       infoBar.classList.remove("shade-header");
     }
@@ -16,23 +21,54 @@ const shadeObserver = new IntersectionObserver(function (
 
 shadeObserver.observe(splashPage);
 
-const skillReveal = document.querySelector(".skill-grid")
+//accent stripe anim
+const stripe = document.querySelector(".stripe")
 const revealOptions = {
-  rootMargin: "-250px 0px 0px 0px"
+  rootMargin: "-600px 0px 0px 0px"
 };
 
-const revealObserver = new IntersectionObserver(function (
+const stripeObserver = new IntersectionObserver(function (
   entries,
-  revealObserver
+  stripeObserver
 ) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
-      skillReveal.classList.add("skill-reveal");
+      stripe.classList.add("stripe-anim")
+
     } else {
-      skillReveal.classList.remove("skill-reveal");
+      stripe.classList.remove("stripe-anim");
     }
   });
 },
   revealOptions);
 
-revealObserver.observe(splashPage);
+stripeObserver.observe(splashPage);
+
+window.addEventListener("scroll", function () {
+
+  const jobOne = document.querySelector(".job1");
+  const jobTwo = document.querySelector(".job2");
+  const jobThree = document.querySelector(".job3");
+  const jobFour = document.querySelector(".job4");
+  const jobFive = document.querySelector(".job5");
+
+  let scrolled = window.pageYOffset;
+  let rate = scrolled * -0.3;
+  if (window.innerHeight < 1000) {
+    jobOne.style.transform = `translateX(${rate + 1100}%)`;
+    jobTwo.style.transform = `translateX(${rate + 1200}%)`;
+    jobThree.style.transform = `translateX(${rate + 1300}%)`;
+    jobFour.style.transform = `translateX(${rate + 1400}%)`;
+    jobFive.style.transform = `translateX(${rate + 1500}%)`;
+    console.log(rate);
+  }
+  else {
+    jobOne.style.transform = `translateX(${rate + 700}%)`;
+    jobTwo.style.transform = `translateX(${rate + 750}%)`;
+    jobThree.style.transform = `translateX(${rate + 800}%)`;
+    jobFour.style.transform = `translateX(${rate + 850}%)`;
+    jobFive.style.transform = `translateX(${rate + 900}%)`;
+    console.log(rate);
+  }
+
+})
