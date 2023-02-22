@@ -1,7 +1,7 @@
 body {
   font-family: 'Noto Sans', sans-serif;
   font-family: 'Sofia Sans', sans-serif;
-  --text-color: #e1e1e3;
+  --text-color: #bac6c7;
   --heading-color: #ffffff;
   --darkest: #18191a;
   --mid-tone: #242526;
@@ -28,10 +28,6 @@ body {
   align-items: center;
   z-index: 99;
   height: 10rem; }
-  .info-bar .left,
-  .info-bar .right,
-  .info-bar .socials {
-    animation: fadeIn 7s; }
 
 @keyframes fadeIn {
   0% {
@@ -53,6 +49,8 @@ body {
       font-size: 4rem;
       text-align: center;
       color: var(--heading-color); }
+    .info-bar .contact a:hover {
+      color: var(--accent); }
   .info-bar a {
     color: var(--heading-color);
     cursor: pointer;
@@ -66,6 +64,7 @@ body {
   .info-bar .socials {
     margin-top: -2rem;
     display: flex;
+    flex-wrap: wrap;
     scale: 2;
     padding-inline: 5px;
     gap: .8rem;
@@ -73,8 +72,19 @@ body {
     .info-bar .socials a:hover {
       color: var(--accent); }
 
+.black .contact h1,
+.black .contact a {
+  color: #000; }
+
+.black .socials a {
+  color: #000; }
+
 body {
   background-color: var(--darkest); }
+  body h3,
+  body h4,
+  body h5 {
+    color: var(--heading-color); }
 
 .section p,
 .section li {
@@ -141,11 +151,15 @@ body {
   .section .main .experience {
     background-image: url("/resume/kiwihug-MS9Tnh3if1o-unsplash.jpg");
     background-size: cover;
-    padding-block: 8rem;
-    color: var(--darkest); }
+    padding-block: 8rem; }
     .section .main .experience p,
     .section .main .experience li {
-      font-weight: 500; }
+      font-weight: 500;
+      color: var(--darkest); }
+    .section .main .experience h3,
+    .section .main .experience h4,
+    .section .main .experience h5 {
+      color: #551717; }
     .section .main .experience .heading {
       background: linear-gradient(45deg, var(--darkest), var(--accent));
       background-size: 800%;
@@ -155,26 +169,30 @@ body {
   .section .main .community {
     padding-block: 8rem;
     position: relative; }
+    .section .main .community .aas {
+      padding-left: 10rem; }
+    .section .main .community .cynon {
+      padding-right: 10rem; }
     .section .main .community .on1 {
       position: absolute;
       z-index: 0;
       height: 300px;
       background: linear-gradient(to right, var(--accent), var(--mid-tone));
+      border: rgba(255, 255, 255, 0.2) ridge;
+      border-width: 0px 0px 0px 5px;
       opacity: 0.5;
       top: 14rem;
       right: 0;
       transform: skewY(-5deg);
       animation: comm-right 5s linear;
       animation-fill-mode: forwards; }
-    .section .main .community .aas {
-      padding-left: 10rem; }
-    .section .main .community .cynon {
-      padding-right: 10rem; }
     .section .main .community .on2 {
       position: absolute;
       z-index: 0;
       height: 300px;
       background: linear-gradient(to left, var(--accent), var(--mid-tone));
+      border: rgba(255, 255, 255, 0.2) groove;
+      border-width: 0px 5px 0px 0px;
       opacity: 0.5;
       top: 42rem;
       left: 0;
@@ -195,6 +213,21 @@ body {
     width: 72%; } }
   .section .main .education {
     padding-block: 8rem; }
+    .section .main .education .edu-hr {
+      color: transparent; }
+    .section .main .education .activate {
+      position: relative;
+      background: linear-gradient(to right, #a52a2a, #a52a2a00);
+      border: 0;
+      height: 0.125rem;
+      margin-left: -11%;
+      animation: edu-stripe 5s linear; }
+
+@keyframes edu-stripe {
+  from {
+    width: 0%; }
+  to {
+    width: 100%; } }
   .section .main .heading {
     font-family: 'Sofia Sans', sans-serif;
     font-size: 2.5rem;
@@ -259,3 +292,26 @@ body {
   100% {
     transform: translate(0, 0%);
     opacity: 1; } }
+
+@media (max-width: 1200px) {
+  .info-bar .contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; }
+    .info-bar .contact h1,
+    .info-bar .contact p {
+      margin-block: 0.5rem; }
+    .info-bar .contact p {
+      padding-inline: 4rem; }
+  .info-bar .contact :nth-child(1) {
+    order: 2; }
+  .info-bar .contact :nth-child(2) {
+    width: 100%; }
+  .info-bar .socials {
+    position: absolute;
+    flex-direction: column;
+    right: 5%;
+    top: 1.5rem;
+    gap: 0px;
+    scale: 1; } }

@@ -12,9 +12,11 @@ const shadeObserver = new IntersectionObserver(function (
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
       infoBar.classList.add("shade-header");
+      infoBar.classList.remove("black")
       skillReveal.classList.add("skill-reveal");
     } else {
       infoBar.classList.remove("shade-header");
+      infoBar.classList.add("black")
     }
   });
 });
@@ -54,12 +56,21 @@ window.addEventListener("scroll", function () {
 
   let scrolled = window.pageYOffset;
   let rate = scrolled * -0.3;
-  if (window.innerHeight < 1000) {
+  if (window.innerWidth < 400) {
     jobOne.style.transform = `translateX(${rate + 1100}%)`;
     jobTwo.style.transform = `translateX(${rate + 1200}%)`;
     jobThree.style.transform = `translateX(${rate + 1300}%)`;
     jobFour.style.transform = `translateX(${rate + 1400}%)`;
     jobFive.style.transform = `translateX(${rate + 1500}%)`;
+    console.log(`small ${rate}`);
+  }
+  else if (window.innerWidth < 800) {
+    jobOne.style.transform = `translateX(${rate + 800}%)`;
+    jobTwo.style.transform = `translateX(${rate + 900}%)`;
+    jobThree.style.transform = `translateX(${rate + 1000}%)`;
+    jobFour.style.transform = `translateX(${rate + 1100}%)`;
+    jobFive.style.transform = `translateX(${rate + 1200}%)`;
+    console.log(`medium ${rate}`);
   }
   else {
     jobOne.style.transform = `translateX(${rate + 700}%)`;
@@ -67,6 +78,7 @@ window.addEventListener("scroll", function () {
     jobThree.style.transform = `translateX(${rate + 800}%)`;
     jobFour.style.transform = `translateX(${rate + 850}%)`;
     jobFive.style.transform = `translateX(${rate + 900}%)`;
+    console.log(`large ${rate}`);
   }
 
 })
@@ -75,9 +87,6 @@ window.addEventListener("scroll", function () {
 const commAnimOne = document.querySelector(".comm-anim1")
 const commAnimTwo = document.querySelector(".comm-anim2")
 const community = document.querySelector(".community")
-const communityOptions = {
-  rootMargin: "0px 0px 0px 0px"
-};
 
 const communityObserver = new IntersectionObserver(function (
   entries,
@@ -93,7 +102,62 @@ const communityObserver = new IntersectionObserver(function (
       commAnimTwo.classList.remove("on2");
     }
   });
-},
-  communityOptions);
+});
 
 communityObserver.observe(community);
+
+//education stripe
+const iop = document.querySelector(".iop")
+const coshh = document.querySelector(".coshh")
+const manHan = document.querySelector(".man-han")
+const hrIOP = document.querySelector(".edu-hr-iop")
+const hrCOSHH = document.querySelector(".edu-hr-coshh")
+const hrMANHAN = document.querySelector(".edu-hr-man-han")
+
+const iopObserver = new IntersectionObserver(function (
+  entries,
+  iopObserver
+) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      hrIOP.classList.add("activate");
+
+    } else {
+      hrIOP.classList.remove("activate");
+    }
+  });
+});
+
+iopObserver.observe(iop);
+
+const coshhObserver = new IntersectionObserver(function (
+  entries,
+  coshhObserver
+) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      hrCOSHH.classList.add("activate");
+
+    } else {
+      hrCOSHH.classList.remove("activate");
+    }
+  });
+});
+
+coshhObserver.observe(coshh);
+
+const manHanObserver = new IntersectionObserver(function (
+  entries,
+  manHanObserver
+) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      hrMANHAN.classList.add("activate");
+
+    } else {
+      hrMANHAN.classList.remove("activate");
+    }
+  });
+});
+
+manHanObserver.observe(manHan);

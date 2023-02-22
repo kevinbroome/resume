@@ -1,7 +1,7 @@
 body {
   font-family: 'Noto Sans', sans-serif;
   font-family: 'Sofia Sans', sans-serif;
-  --text-color: #e1e1e3;
+  --text-color: #bac6c7;
   --heading-color: #ffffff;
   --darkest: #18191a;
   --mid-tone: #242526;
@@ -9,7 +9,7 @@ body {
   --accent: #a52a2a;
 }
 
-//Info Bar Design
+//shaded background for info bar
 .shade-header {
   background: linear-gradient(var(--darkest), #18191ae1, #18191ac5, #18191a00);
   animation: shading 2s linear;
@@ -25,6 +25,7 @@ body {
   }
 }
 
+//Info Bar Design
 .info-bar {
   position: sticky;
   top: 0;
@@ -36,10 +37,11 @@ body {
   z-index: 99;
   height: 10rem;
 
+  //intro animation
   .left,
   .right,
   .socials {
-    animation: fadeIn 7s;
+    // animation: fadeIn 7s;
   }
 
   @keyframes fadeIn {
@@ -71,6 +73,10 @@ body {
       text-align: center;
       color: var(--heading-color);
     }
+
+    a:hover {
+      color: var(--accent);
+    }
   }
 
   a {
@@ -94,6 +100,7 @@ body {
   .socials {
     margin-top: -2rem;
     display: flex;
+    flex-wrap: wrap;
     scale: 2;
     padding-inline: 5px;
     gap: .8rem;
@@ -105,10 +112,32 @@ body {
   }
 }
 
+//change colour on splash screen
+.black {
+  .contact {
+
+    h1,
+    a {
+      color: #000;
+    }
+  }
+
+  .socials {
+    a {
+      color: #000;
+    }
+  }
+}
 
 //Body
 body {
   background-color: var(--darkest);
+
+  h3,
+  h4,
+  h5 {
+    color: var(--heading-color);
+  }
 }
 
 .section {
@@ -199,11 +228,17 @@ body {
       background-image: url("/resume/kiwihug-MS9Tnh3if1o-unsplash.jpg");
       background-size: cover;
       padding-block: 8rem;
-      color: var(--darkest);
 
       p,
       li {
         font-weight: 500;
+        color: var(--darkest);
+      }
+
+      h3,
+      h4,
+      h5 {
+        color: #551717;
       }
 
       .heading {
@@ -219,19 +254,6 @@ body {
       padding-block: 8rem;
       position: relative;
 
-      .on1 {
-        position: absolute;
-        z-index: 0;
-        height: 300px;
-        background: linear-gradient(to right, var(--accent), var(--mid-tone));
-        opacity: 0.5;
-        top: 14rem;
-        right: 0;
-        transform: skewY(-5deg);
-        animation: comm-right 5s linear;
-        animation-fill-mode: forwards;
-      }
-
       .aas {
         padding-left: 10rem;
       }
@@ -240,11 +262,28 @@ body {
         padding-right: 10rem;
       }
 
+      .on1 {
+        position: absolute;
+        z-index: 0;
+        height: 300px;
+        background: linear-gradient(to right, var(--accent), var(--mid-tone));
+        border: rgba(255, 255, 255, 0.2) ridge;
+        border-width: 0px 0px 0px 5px;
+        opacity: 0.5;
+        top: 14rem;
+        right: 0;
+        transform: skewY(-5deg);
+        animation: comm-right 5s linear;
+        animation-fill-mode: forwards;
+      }
+
       .on2 {
         position: absolute;
         z-index: 0;
         height: 300px;
         background: linear-gradient(to left, var(--accent), var(--mid-tone));
+        border: rgba(255, 255, 255, 0.2) groove;
+        border-width: 0px 5px 0px 0px;
         opacity: 0.5;
         top: 42rem;
         left: 0;
@@ -276,6 +315,29 @@ body {
 
     .education {
       padding-block: 8rem;
+
+      .edu-hr {
+        color: transparent;
+      }
+
+      .activate {
+        position: relative;
+        background: linear-gradient(to right, #a52a2a, #a52a2a00);
+        border: 0;
+        height: 0.125rem;
+        margin-left: -11%;
+        animation: edu-stripe 5s linear;
+      }
+
+      @keyframes edu-stripe {
+        from {
+          width: 0%;
+        }
+
+        to {
+          width: 100%;
+        }
+      }
     }
 
     .heading {
@@ -371,3 +433,43 @@ body {
     }
   }
 }
+
+@media (max-width:1200px) {
+  .info-bar {
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+
+      h1,
+      p {
+        margin-block: 0.5rem;
+      }
+
+      p {
+        padding-inline: 4rem;
+      }
+    }
+
+    .contact :nth-child(1) {
+      order: 2;
+    }
+
+    .contact :nth-child(2) {
+      width: 100%;
+    }
+
+    .socials {
+      position: absolute;
+      flex-direction: column;
+      right: 5%;
+      top: 1.5rem;
+      gap: 0px;
+      scale: 1;
+
+    }
+  }
+}
+
+@media (max-width:600px) {}
