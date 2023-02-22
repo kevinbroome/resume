@@ -60,7 +60,6 @@ window.addEventListener("scroll", function () {
     jobThree.style.transform = `translateX(${rate + 1300}%)`;
     jobFour.style.transform = `translateX(${rate + 1400}%)`;
     jobFive.style.transform = `translateX(${rate + 1500}%)`;
-    console.log(rate);
   }
   else {
     jobOne.style.transform = `translateX(${rate + 700}%)`;
@@ -68,7 +67,33 @@ window.addEventListener("scroll", function () {
     jobThree.style.transform = `translateX(${rate + 800}%)`;
     jobFour.style.transform = `translateX(${rate + 850}%)`;
     jobFive.style.transform = `translateX(${rate + 900}%)`;
-    console.log(rate);
   }
 
 })
+
+//community stripe
+const commAnimOne = document.querySelector(".comm-anim1")
+const commAnimTwo = document.querySelector(".comm-anim2")
+const community = document.querySelector(".community")
+const communityOptions = {
+  rootMargin: "0px 0px 0px 0px"
+};
+
+const communityObserver = new IntersectionObserver(function (
+  entries,
+  communityObserver
+) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      commAnimOne.classList.add("on1");
+      commAnimTwo.classList.add("on2");
+
+    } else {
+      commAnimOne.classList.remove("on1");
+      commAnimTwo.classList.remove("on2");
+    }
+  });
+},
+  communityOptions);
+
+communityObserver.observe(community);
