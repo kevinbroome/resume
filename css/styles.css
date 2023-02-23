@@ -28,6 +28,10 @@ body {
   align-items: center;
   z-index: 99;
   height: 10rem; }
+  .info-bar .left,
+  .info-bar .right,
+  .info-bar .socials {
+    animation: fadeIn 7s; }
 
 @keyframes fadeIn {
   0% {
