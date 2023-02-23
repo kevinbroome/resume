@@ -4,6 +4,9 @@ const splashPage = document.querySelector(".splash-page")
 //skill grid and shading anim
 const infoBar = document.querySelector(".info-bar")
 const skillReveal = document.querySelector(".skill-grid")
+const splashOptions = {
+  rootMargin: "-200px 0px 0px 0px"
+}
 
 const shadeObserver = new IntersectionObserver(function (
   entries,
@@ -19,7 +22,7 @@ const shadeObserver = new IntersectionObserver(function (
       infoBar.classList.add("black")
     }
   });
-});
+}, splashOptions);
 
 shadeObserver.observe(splashPage);
 
