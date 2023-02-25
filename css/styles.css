@@ -230,7 +230,7 @@ body {
       padding-left: 10rem; }
     /* line 287, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .section .main .community .cynon {
-      padding-right: 10rem; }
+      padding-right: 18rem; }
     /* line 291, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .section .main .community .on1 {
       position: absolute;
@@ -240,7 +240,7 @@ body {
       border: rgba(255, 255, 255, 0.2) ridge;
       border-width: 0px 0px 0px 5px;
       opacity: 0.5;
-      top: 14rem;
+      top: 27%;
       right: 0;
       transform: skewY(-5deg);
       animation: comm-right 5s linear;
@@ -254,7 +254,7 @@ body {
       border: rgba(255, 255, 255, 0.2) groove;
       border-width: 0px 5px 0px 0px;
       opacity: 0.5;
-      top: 42rem;
+      top: 69%;
       left: 0;
       transform: skewY(-5deg);
       animation: comm-left 5s linear;
@@ -284,7 +284,7 @@ body {
       border: 0;
       height: 0.125rem;
       margin-left: -11%;
-      animation: edu-stripe 5s linear; }
+      animation: edu-stripe 2s linear; }
 
 @keyframes edu-stripe {
   from {
@@ -409,10 +409,10 @@ body {
       padding-right: 0rem; }
     /* line 512, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .section .main .community .on1 {
-      top: 20rem; }
+      top: 33%; }
     /* line 516, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .section .main .community .on2 {
-      top: 52rem; }
+      top: 79%; }
   @keyframes comm-right {
     from {
       width: 0%; }

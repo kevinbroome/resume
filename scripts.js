@@ -59,6 +59,7 @@ window.addEventListener("scroll", function () {
 
   let scrolled = window.pageYOffset;
   let rate = scrolled * -0.3;
+
   if (window.innerWidth < 400) {
     jobOne.style.transform = `translateX(${rate + 1100}%)`;
     jobTwo.style.transform = `translateX(${rate + 1200}%)`;
@@ -67,12 +68,20 @@ window.addEventListener("scroll", function () {
     jobFive.style.transform = `translateX(${rate + 1500}%)`;
     console.log(`small ${rate}`);
   }
-  else if (window.innerWidth < 800) {
-    jobOne.style.transform = `translateX(${rate + 800}%)`;
-    jobTwo.style.transform = `translateX(${rate + 900}%)`;
-    jobThree.style.transform = `translateX(${rate + 1000}%)`;
-    jobFour.style.transform = `translateX(${rate + 1100}%)`;
-    jobFive.style.transform = `translateX(${rate + 1200}%)`;
+  else if (window.innerWidth < 600) {
+    jobOne.style.transform = `translateX(${rate + 900}%)`;
+    jobTwo.style.transform = `translateX(${rate + 1000}%)`;
+    jobThree.style.transform = `translateX(${rate + 1100}%)`;
+    jobFour.style.transform = `translateX(${rate + 1200}%)`;
+    jobFive.style.transform = `translateX(${rate + 1300}%)`;
+    console.log(`med-small ${rate}`);
+  }
+  else if (window.innerWidth < 900) {
+    jobOne.style.transform = `translateX(${rate + 750}%)`;
+    jobTwo.style.transform = `translateX(${rate + 800}%)`;
+    jobThree.style.transform = `translateX(${rate + 850}%)`;
+    jobFour.style.transform = `translateX(${rate + 900}%)`;
+    jobFive.style.transform = `translateX(${rate + 950}%)`;
     console.log(`medium ${rate}`);
   }
   else {
@@ -84,7 +93,7 @@ window.addEventListener("scroll", function () {
     console.log(`large ${rate}`);
   }
 
-})
+});
 
 //community stripe
 const commAnimOne = document.querySelector(".comm-anim1")
