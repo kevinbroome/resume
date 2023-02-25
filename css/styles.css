@@ -452,11 +452,12 @@ body {
     padding-bottom: 0rem; }
     /* line 581, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .section .main .experience .sub-title {
-      text-align: center; }
-  /* line 588, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      text-align: center;
+      left: 0; }
+  /* line 589, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .section .main .community .on1 {
     top: 32rem; }
-  /* line 592, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 593, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .section .main .community .on2 {
     top: 78rem; } }
 
