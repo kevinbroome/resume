@@ -194,7 +194,7 @@ body {
       gap: 2rem;
       margin-top: 9rem;
 
-      .stripe-anim {
+      .stripe-anim{
         position: absolute;
         left: 0;
         top: 8rem;
@@ -202,7 +202,7 @@ body {
         width: 100%;
         transform: skewY(-10deg);
         z-index: 0;
-        opacity: 0.5;
+        opacity: .5;
         background-color: var(--accent);
         border: rgba(255, 255, 255, 0.2) ridge;
         border-width: 5px 0px;
@@ -270,6 +270,7 @@ body {
         background: linear-gradient(45deg, var(--darkest), var(--accent));
         background-size: 800%;
         background-clip: text;
+        -webkit-background-clip: text;
         animation: head-animate 20s alternate infinite;
         color: transparent;
       }
@@ -374,6 +375,7 @@ body {
       background: linear-gradient(45deg, var(--text-color), var(--accent));
       background-size: 800%;
       background-clip: text;
+      -webkit-background-clip: text;
       animation: head-animate 20s alternate infinite;
       color: transparent;
     }
