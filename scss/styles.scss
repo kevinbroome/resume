@@ -441,6 +441,11 @@ body {
 }
 
 @media (max-width:1200px) {
+  .section{
+    .nova{
+      display: none;
+    }
+  }
   .info-bar {
     height: 1rem;
     transition: height 0.5s ease-in-out;
