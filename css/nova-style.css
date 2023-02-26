@@ -1,0 +1,19 @@
+/* line 1, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+body {
+  background-color: #000;
+  padding: 3rem; }
+
+/* line 6, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+#v0 {
+  position: fixed;
+  bottom: 0;
+  height: 100%; }
+
+/* line 12, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+#set-height {
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  height: 11000px; }
+
+/*# sourceMappingURL=nova-style.css.map */
