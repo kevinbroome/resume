@@ -20,4 +20,4 @@ function scrollPlay(){
   window.requestAnimationFrame(scrollPlay);
 }
 
-window.requestAnimationFrame(scrollPlay);
+scrollPlay()
