@@ -450,6 +450,9 @@ body {
     height: 1rem;
     transition: height 0.5s ease-in-out;
 
+    .models-3d {
+      display: none;
+    }
     .contact {
       display: flex;
       flex-wrap: wrap;
