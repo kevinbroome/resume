@@ -1,23 +1,43 @@
-let frameNumber = 0, // start video at frame 0
-    // lower numbers = faster playback
-    playbackConst = 1500, 
-    // get page height from video duration
-    setHeight = document.getElementById("set-height"), 
-    // select video element         
-    vid = document.getElementById('v0'); 
-    // var vid = $('#v0')[0]; // jquery option
-
-// dynamically set the page height according to video length
-/* vid.addEventListener('loadedmetadata', function() {
-  setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
-}); */
-
-
-// Use requestAnimationFrame for smooth playback
-function scrollPlay(){  
-  let frameNumber  = window.pageYOffset/playbackConst;
-  vid.currentTime  = frameNumber;
-  window.requestAnimationFrame(scrollPlay);
+const Obs = document.querySelector(".blender-observer")
+const ble = document.querySelector(".ble")
+const nder = document.querySelector(".nder")
+const blenderOptions = {
+  rootMargin: "100px 0px -400px 0px"
 }
 
-scrollPlay()
+const blenderObserver = new IntersectionObserver(function (
+  entries,
+  blenderObserver
+) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      ble.classList.add("ble-anim");
+      nder.classList.add("nder-anim");
+    } else {
+      ble.classList.remove("ble-anim");
+      nder.classList.remove("nder-anim");
+    }
+  });
+}, blenderOptions);
+
+blenderObserver.observe(Obs);
+
+const doughnut = document.querySelector(".doughnut")
+const cup = document.querySelector(".cup")
+const earlyOptions = {
+  rootMargin: "0px 0px -800px 0px"
+}
+
+const earlyObs = new IntersectionObserver(function (
+  entries,
+  earlyObs
+) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      doughnut.classList.add("doughnut-anim");
+      cup.classList.add("cup-anim");
+    }
+  });
+}, earlyOptions);
+
+earlyObs.observe(Obs);

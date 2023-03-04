@@ -1,19 +1,213 @@
-/* line 1, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+/* This styles the aside container */
+/* line 2, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+#aSide {
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  top: calc(50% - 250px);
+  right: 7%; }
+
+/* This styles the 3D object inserted in the aside container */
+/* line 11, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+#aSide model-viewer {
+  height: 600px;
+  width: 600px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none; }
+
+/* line 20, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+body img,
+video {
+  max-width: 100%; }
+
+/* line 24, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
 body {
-  background-color: #000;
-  padding: 3rem; }
+  background: brown;
+  overflow-x: hidden; }
 
-/* line 6, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
-#v0 {
-  position: fixed;
-  bottom: 0;
-  height: 100%; }
+/* line 29, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+p {
+  font-size: 2.5rem;
+  font-family: "Lusitana", serif;
+  z-index: 5; }
 
-/* line 12, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
-#set-height {
+/* line 35, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+.blender {
   margin-inline: auto;
   display: flex;
   justify-content: center;
-  height: 11000px; }
+  min-height: 100vh;
+  max-width: 40rem; }
+  /* line 42, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .blender .doughnut,
+  .blender .cup {
+    position: absolute;
+    visibility: hidden; }
+  /* line 48, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .blender .doughnut-anim {
+    visibility: visible;
+    position: absolute;
+    left: 1rem;
+    top: 74rem;
+    height: 34rem;
+    width: 59rem;
+    object-fit: cover;
+    border-radius: 1000vw;
+    animation: doughnut 6s linear; }
+
+@keyframes doughnut {
+  from {
+    transform: translateX(-80rem); }
+  to {
+    transform: translateX(0rem); } }
+  /* line 67, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .blender .cup-anim {
+    visibility: visible;
+    position: absolute;
+    right: 0;
+    top: 95rem;
+    height: 34rem;
+    width: 37rem;
+    object-fit: cover;
+    object-position: -14rem 0;
+    border-radius: 1000vw;
+    z-index: 1;
+    animation: cup 8s linear; }
+
+@keyframes cup {
+  from {
+    transform: translateX(50rem); }
+  to {
+    transform: translateX(0rem); } }
+  /* line 88, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .blender .about-me {
+    padding-top: 20rem; }
+    /* line 90, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+    .blender .about-me br {
+      margin-top: 10rem; }
+    /* line 94, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+    .blender .about-me p {
+      position: relative;
+      text-align: justify; }
+    /* line 98, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+    .blender .about-me p:nth-of-type(1) {
+      left: -15rem;
+      background-color: #ffffff75;
+      backdrop-filter: blur(5px);
+      border-radius: 10px;
+      padding: 2rem; }
+    /* line 105, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+    .blender .about-me p:nth-of-type(3) {
+      margin-top: -15rem;
+      background: none; }
+    /* line 109, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+    .blender .about-me p:nth-of-type(4) {
+      left: 15rem;
+      background-color: #ffffff75;
+      backdrop-filter: blur(5px);
+      border-radius: 10px;
+      padding: 2rem; }
+    /* line 117, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+    .blender .about-me .blender-observer::before {
+      content: "";
+      position: absolute;
+      top: -2rem;
+      left: -2rem;
+      height: 29rem;
+      width: 43rem;
+      border-radius: 10px;
+      background-color: #ffffff75;
+      backdrop-filter: blur(5px);
+      z-index: -1; }
+    /* line 129, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+    .blender .about-me .ble,
+    .blender .about-me .nder {
+      position: relative;
+      transform: scale(0.7);
+      visibility: hidden;
+      z-index: 5; }
+    /* line 136, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+    .blender .about-me .ble-anim {
+      visibility: visible;
+      top: -3rem;
+      left: -5rem;
+      animation: ble 3s linear; }
+
+@keyframes ble {
+  from {
+    transform: translateX(-200px) scale(0.7);
+    opacity: 0; }
+  to {
+    transform: translateX(0px) scale(0.7);
+    opacity: 1; } }
+    /* line 153, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+    .blender .about-me .nder-anim {
+      visibility: visible;
+      top: -14rem;
+      left: -5rem;
+      animation: nder 3s linear; }
+
+@keyframes nder {
+  from {
+    transform: translateX(200px) scale(0.7);
+    opacity: 0; }
+  to {
+    transform: translateX(0px) scale(0.7);
+    opacity: 1; } }
+
+/* line 171, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+.nintrondo {
+  position: relative;
+  padding-bottom: 31rem; }
+  /* line 174, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .nintrondo p {
+    text-align: justify; }
+  /* line 177, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .nintrondo .tron-text {
+    position: relative;
+    max-width: 30rem;
+    background-color: #ffffff75;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-inline: auto;
+    top: -9rem; }
+  /* line 187, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .nintrondo .nintrondo-video {
+    filter: grayscale(70%);
+    width: 100vw; }
+  /* line 191, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .nintrondo .light-tron,
+  .nintrondo .day-tron {
+    position: absolute;
+    visibility: hidden;
+    height: 38rem;
+    width: 41rem;
+    object-fit: cover;
+    object-position: -22rem 0; }
+  /* line 200, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .nintrondo .dark-tron {
+    position: absolute;
+    visibility: hidden;
+    height: 38rem;
+    width: 100%;
+    object-fit: cover; }
+  /* line 207, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .nintrondo .light-anim {
+    right: 0;
+    top: 67rem;
+    visibility: visible; }
+  /* line 212, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .nintrondo .day-anim {
+    left: 0;
+    top: 67rem;
+    visibility: visible; }
+  /* line 217, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .nintrondo .dark-anim {
+    left: 0;
+    top: 106rem;
+    visibility: visible; }
 
 /*# sourceMappingURL=nova-style.css.map */

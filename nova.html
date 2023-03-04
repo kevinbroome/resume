@@ -1,26 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Modelling</title>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   <link rel="stylesheet" type="text/css" href="/resume/css/nova-style.css">
-  <title>Nova Model</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Noto+Sans&display=swap"
+    rel="stylesheet">
 </head>
-<body>
- <section class="container">
-  <div class="content">
-    <h1 class="scroll-icon">
 
-    </h1>
-  </div>
- </section> 
- <div id="set-height">
-  <video id="v0",  tabindex="0", autobuffer="autobuffer" preload="preload">
-    <source src="https://i.imgur.com/8FJywDu.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
-   </video>
- </div>
- 
+<body>
+  <section class="blender">
+    <div class="about-me">
+      <img class="doughnut" src="/resume/assets/final.png" alt="3d model of a doughnut and coffee cup">
+      <img class="cup" src="/resume/assets/waterincup.png" alt="3d model of a cup of water">
+      <p>
+        In March 2020 I was put on furlough from my workplace.
+      </p>
+      <br>
+      <p class="blender-observer">
+        During the following months I decided that I wanted to learn how to make 3D models. So I began to teach myself
+      </p>
+      <img class="ble" src="/resume/assets/blender-front.png">
+      <img class="nder" src="/resume/assets/blender-back.png">
+      <p>
+        using online video and text tutorials.
+      </p>
+      <br>
+      <p>
+        Like most people, I began by learning how to create a doughnut and a coffee cup, but before long I wanted to
+        design more adventurous models...
+      </p>
+    </div>
+  </section>
+  <section class="nintrondo">
+    <video class="nintrondo-video" src="/resume/assets/0001-0900.mp4" autplay muted loop="true" preload
+      controls></video>
+    <img class="day-tron day-anim" src="/resume/assets/ninlight.png" alt="3D model of a futuristic game console in the daylight">
+    <img class="light-tron light-anim" src="/resume/assets/supernintrondo.png" alt="3D model of a futuristic game console with lights">
+    <img class="dark-tron dark-anim" src="/resume/assets/nindark.png" alt="3D model of a futuristic game console in the dark">
+    <div class="tron-text">
+      <p class="tron-observer">
+        I started designing my own models by taking already existing products and adding a unique twist on them.
+      </p>
+      <br>
+      <p>
+        I only used "hard-body" modelling to create a super nintendo which looked like it came from the movie 'Tron'.
+      </p>
+    </div>
+  </section>
+  <section class="nova">
+    <video class="nova-video" src="/resume/assets/0838-1000.mp4" autplay muted loop="true" preload controls></video>
+    <img src="/resume/assets/Novanormal.png" alt="3d model of a robot anthro cat in daylight">
+    <img src="/resume/assets/NovaSecond.png" alt="3d model of a robot anthro cat in a spotlight">
+    <img src="/resume/assets/Nova with Bots.png"
+      alt="3d scene of robot cat with little robot lights floating around it">
+    <img src="/resume/assets/wireframe.png" alt="wireframe image of robot cat front">
+    <img src="/resume/assets/wireframeback.png" alt="wireframe image of robot cat back">
+    <p>
+      Whilst still working on "hard-body" modelling I began to experiment with "soft-body" work.
+    </p>
+    <p>
+      When creating this robot model I wanted to attempt to create soft fabric for the trousers and wrist strap.
+    </p>
+    <p>
+      It was during this time that I began to look into the posibility of 3D printing my models and the pitfalls that
+      would occur if the model was not designed correctly.
+    </p>
+  </section>
+  <section class="3D-printing">
+    <video src="/resume/assets/TechPriestFinal.mov" autplay muted loop="true" preload controls></video>
+    <video src="/resume/assets/TechPriestModel.mov" autplay muted loop="true" preload controls></video>
+    <div id="aSide">
+      <model-viewer src="resume/assets/WizBust.glb" alt="Wizard Bust 3D Model" aut-rotate camera-controls
+        ar></model-viewer>
+    </div>
+    <p>
+      I began learning how to correctly create a model in Blender using best practice, to ensure not only a solid model,
+      but also one that can be printed without errors or failed prints.
+    </p>
+    <p>
+      Using what I learnt from the previous model I leaned more into the "soft-body" design when creating my models
+      which lent itself to more realistic designs and real-world objects.
+    </p>
+    <p>
+      I currently host all my publicly avaiable 3d models on cults3d website, with some of my models gaining thousands
+      of downloads and hundreds of likes.
+    </p>
+    <p>
+      I hope in the future to incorporate my 3D designs more into my websites on both a personal and professional level.
+    </p>
+  </section>
 </body>
 <footer>
   <script src="nova.js"></script>
