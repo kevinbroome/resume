@@ -166,29 +166,58 @@ p {
     visibility: hidden;
     height: 38rem;
     width: 41rem;
-    object-fit: cover;
-    object-position: -22rem 0; }
-  /* line 181, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+    object-fit: cover; }
+  /* line 180, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nintrondo .dark-tron {
     position: absolute;
     visibility: hidden;
     height: 38rem;
     width: 100%;
     object-fit: cover; }
-  /* line 188, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 187, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nintrondo .light-anim {
     right: 0;
     top: 67rem;
-    visibility: visible; }
-  /* line 193, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+    visibility: visible;
+    animation: light-tron 5s linear;
+    animation-fill-mode: forwards; }
+
+@keyframes light-tron {
+  from {
+    transform: translateX(40rem);
+    object-position: 0; }
+  to {
+    transform: translateX(0rem);
+    object-position: -22rem; } }
+  /* line 204, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nintrondo .day-anim {
     left: 0;
     top: 67rem;
-    visibility: visible; }
-  /* line 198, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+    visibility: visible;
+    animation: day-tron 5s linear;
+    animation-fill-mode: forwards; }
+
+@keyframes day-tron {
+  from {
+    transform: translateX(-40rem);
+    object-position: 0; }
+  to {
+    transform: translateX(0rem);
+    object-position: -22rem; } }
+  /* line 221, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nintrondo .dark-anim {
     left: 0;
     top: 106rem;
-    visibility: visible; }
+    visibility: visible;
+    animation: dark-tron 7s linear;
+    animation-fill-mode: forwards; }
+
+@keyframes dark-tron {
+  from {
+    transform: translateY(10rem);
+    object-position: 0rem 10rem; }
+  to {
+    transform: translateY(0rem);
+    object-position: 0rem -10rem; } }
 
 /*# sourceMappingURL=nova-style.css.map */

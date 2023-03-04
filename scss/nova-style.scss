@@ -176,7 +176,6 @@ p {
     height: 38rem;
     width: 41rem;
     object-fit: cover;
-    object-position: -22rem 0;
   }
   .dark-tron {
     position: absolute;
@@ -189,15 +188,51 @@ p {
     right: 0;
     top: 67rem;
     visibility: visible;
+    animation: light-tron 5s linear;
+    animation-fill-mode: forwards;
+  }
+  @keyframes light-tron {
+    from {
+      transform: translateX(40rem);
+      object-position: 0;
+    }
+    to {
+      transform: translateX(0rem);
+      object-position: -22rem;
+    }
   }
   .day-anim {
     left: 0;
     top: 67rem;
     visibility: visible;
+    animation: day-tron 5s linear;
+    animation-fill-mode: forwards;
+  }
+  @keyframes day-tron {
+    from {
+      transform: translateX(-40rem);
+      object-position: 0;
+    }
+    to {
+      transform: translateX(0rem);
+      object-position: -22rem;
+    }
   }
   .dark-anim {
     left: 0;
     top: 106rem;
     visibility: visible;
+    animation: dark-tron 7s linear;
+    animation-fill-mode: forwards;
+  }
+  @keyframes dark-tron {
+    from {
+      transform: translateY(10rem);
+      object-position: 0rem 10rem;
+    }
+    to {
+      transform: translateY(0rem);
+      object-position: 0rem -10rem;
+    }
   }
 }

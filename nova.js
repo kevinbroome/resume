@@ -41,3 +41,27 @@ const earlyObs = new IntersectionObserver(function (
 }, earlyOptions);
 
 earlyObs.observe(Obs);
+
+const tronObs = document.querySelector(".tron-observer");
+const dark = document.querySelector(".dark-tron");
+const light = document.querySelector(".light-tron");
+const day = document.querySelector(".day-tron");
+
+const tronOptions = {
+  rootMargin: "0px 0px -100px 0px"
+}
+
+const tronObserver = new IntersectionObserver(function (
+  entries,
+  tronObserver
+) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      dark.classList.add("dark-anim");
+      light.classList.add("light-anim");
+      day.classList.add("day-anim");
+    }
+  });
+}, tronOptions);
+
+tronObserver.observe(tronObs);
