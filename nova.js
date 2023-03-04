@@ -65,3 +65,36 @@ const tronObserver = new IntersectionObserver(function (
 }, tronOptions);
 
 tronObserver.observe(tronObs);
+
+const novaObs = document.querySelector(".nova-text-mid");
+const novaTop = document.querySelector(".nova-text-top");
+const novaBot = document.querySelector(".nova-text-bot");
+const novaTrans = document.querySelector(".nova-trans");
+const novaNormal = document.querySelector(".nova-normal");
+const novaSecond = document.querySelector(".nova-second");
+const novaBots = document.querySelector(".nova-bots");
+
+const novaObserver = new IntersectionObserver(function (
+  entries,
+  novaObsserver
+) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      novaTop.classList.add("nova-top-anim");
+      novaBot.classList.add("nova-bot-anim");
+      novaTrans.classList.add("trans-anim");
+      novaNormal.classList.add("normal-anim");
+      novaSecond.classList.add("second-anim");
+      novaBots.classList.add("bots-anim");
+    } else {
+      novaTop.classList.remove("nova-top-anim");
+      novaBot.classList.remove("nova-bot-anim");
+      novaTrans.classList.remove("trans-anim");
+      novaNormal.classList.remove("normal-anim");
+      novaSecond.classList.remove("second-anim");
+      novaBots.classList.remove("bots-anim");
+    }
+  });
+});
+
+novaObserver.observe(novaObs);

@@ -220,4 +220,101 @@ p {
     transform: translateY(0rem);
     object-position: 0rem -10rem; } }
 
+/* line 239, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+.nova {
+  position: relative; }
+  /* line 241, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .nova .nova-video::before {
+    content: "";
+    height: 10rem;
+    width: 10rem;
+    inset: 0;
+    position: absolute;
+    background: red; }
+  /* line 249, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .nova p {
+    position: relative;
+    max-width: 30rem;
+    background-color: #ffffff75;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-inline: auto;
+    top: -9rem;
+    transform: translateX(0rem);
+    transition: 2s ease-in-out; }
+  /* line 261, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .nova .nova-top-anim {
+    transform: translateX(-15rem); }
+  /* line 264, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .nova .nova-bot-anim {
+    transform: translateX(15rem);
+    z-index: 7; }
+  /* line 268, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .nova .nova-normal,
+  .nova .nova-second,
+  .nova .nova-bots,
+  .nova .nova-wire-one,
+  .nova .nova-wire-two {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 2s ease-in-out; }
+  /* line 278, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .nova .normal-anim {
+    visibility: visible;
+    left: 0rem;
+    top: 68rem;
+    height: 55rem;
+    object-fit: cover;
+    opacity: 1; }
+  /* line 286, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .nova .second-anim {
+    visibility: visible;
+    left: 0rem;
+    top: 68rem;
+    height: 55rem;
+    object-fit: cover;
+    animation: secondlayer 20s alternate infinite; }
+
+@keyframes secondlayer {
+  0% {
+    opacity: 0%; }
+  50% {
+    opacity: 100%; }
+  100% {
+    opacity: 100%; } }
+  /* line 305, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .nova .bots-anim {
+    visibility: visible;
+    left: 0rem;
+    top: 68rem;
+    height: 55rem;
+    object-fit: cover;
+    animation: thirdlayer 20s alternate infinite; }
+
+@keyframes thirdlayer {
+  0% {
+    opacity: 0%; }
+  50% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+  /* line 324, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .nova .nova-trans {
+    position: absolute;
+    top: 64rem;
+    height: 70rem;
+    transform: translateX(-10rem);
+    z-index: 6;
+    transition: 2s ease-in-out; }
+  /* line 332, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .nova .trans-anim {
+    height: 83rem;
+    transform: translateX(65rem); }
+  /* line 336, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  .nova .trans-anim:hover {
+    height: 100rem;
+    top: 53rem; }
+
 /*# sourceMappingURL=nova-style.css.map */
