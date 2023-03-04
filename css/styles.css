@@ -1,7 +1,7 @@
 /* line 1, ../../../../xampp/htdocs/resume/scss/styles.scss */
 body {
-  font-family: 'Noto Sans', sans-serif;
-  font-family: 'Sofia Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Sofia Sans", sans-serif;
   --text-color: #bac6c7;
   --heading-color: #ffffff;
   --darkest: #18191a;
@@ -71,7 +71,7 @@ body {
     /* line 88, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .info-bar a:hover, .info-bar a:focus {
       color: var(--accent);
-      text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000; }
+      text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000; }
     /* line 95, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .info-bar a:visited {
       color: var(--heading-color); }
@@ -82,39 +82,39 @@ body {
     flex-wrap: wrap;
     scale: 2;
     padding-inline: 5px;
-    gap: .8rem;
+    gap: 0.8rem;
     z-index: 100; }
     /* line 109, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .info-bar .socials a:hover {
       color: var(--accent); }
 
-/* line 119, ../../../../xampp/htdocs/resume/scss/styles.scss */
+/* line 118, ../../../../xampp/htdocs/resume/scss/styles.scss */
 .black .contact h1,
 .black .contact a {
   color: #000; }
 
-/* line 126, ../../../../xampp/htdocs/resume/scss/styles.scss */
+/* line 125, ../../../../xampp/htdocs/resume/scss/styles.scss */
 .black .socials a {
   color: #000; }
 
-/* line 133, ../../../../xampp/htdocs/resume/scss/styles.scss */
+/* line 132, ../../../../xampp/htdocs/resume/scss/styles.scss */
 body {
   background-color: var(--darkest); }
-  /* line 136, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 135, ../../../../xampp/htdocs/resume/scss/styles.scss */
   body h3,
   body h4,
   body h5 {
     color: var(--heading-color); }
 
-/* line 144, ../../../../xampp/htdocs/resume/scss/styles.scss */
+/* line 143, ../../../../xampp/htdocs/resume/scss/styles.scss */
 .section .nova {
   text-decoration: none;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif; }
 
 /* line 149, ../../../../xampp/htdocs/resume/scss/styles.scss */
 .section p,
 .section li {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 300;
   text-align: justify;
   list-style-type: circle; }
@@ -169,7 +169,7 @@ body {
       width: 100%;
       transform: skewY(-10deg);
       z-index: 0;
-      opacity: .5;
+      opacity: 0.5;
       background-color: var(--accent);
       border: rgba(255, 255, 255, 0.2) ridge;
       border-width: 5px 0px;
@@ -298,7 +298,7 @@ body {
     width: 100%; } }
   /* line 373, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .section .main .heading {
-    font-family: 'Sofia Sans', sans-serif;
+    font-family: "Sofia Sans", sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
     z-index: 0;
@@ -462,10 +462,10 @@ body {
     .section .main .experience .sub-title {
       text-align: center;
       left: 0; }
-  /* line 598, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 597, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .section .main .community .on1 {
     top: 32rem; }
-  /* line 602, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 601, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .section .main .community .on2 {
     top: 78rem; } }
 
