@@ -35,7 +35,7 @@ p {
     width: 59rem;
     object-fit: cover;
     border-radius: 1000vw;
-    animation: doughnut 6s linear;
+    animation: doughnut 6s linear forwards;
   }
   @keyframes doughnut {
     from {
@@ -56,7 +56,7 @@ p {
     object-position: -14rem 0;
     border-radius: 1000vw;
     z-index: 1;
-    animation: cup 8s linear;
+    animation: cup 8s linear forwards;
   }
   @keyframes cup {
     from {
@@ -174,7 +174,7 @@ p {
     position: absolute;
     visibility: hidden;
     height: 38rem;
-    width: 41rem;
+    width: 35%;
     object-fit: cover;
   }
   .dark-tron {
@@ -186,7 +186,7 @@ p {
   }
   .light-anim {
     right: 0;
-    top: 67rem;
+    bottom: 28%;
     visibility: visible;
     animation: light-tron 5s linear;
     animation-fill-mode: forwards;
@@ -203,7 +203,7 @@ p {
   }
   .day-anim {
     left: 0;
-    top: 67rem;
+    bottom: 28%;
     visibility: visible;
     animation: day-tron 5s linear;
     animation-fill-mode: forwards;
@@ -220,7 +220,7 @@ p {
   }
   .dark-anim {
     left: 0;
-    top: 106rem;
+    bottom: 1%;
     visibility: visible;
     animation: dark-tron 7s linear;
     animation-fill-mode: forwards;
@@ -238,13 +238,18 @@ p {
 }
 .nova {
   position: relative;
-  .nova-video::before {
-    content: "";
-    height: 10rem;
-    width: 10rem;
-    inset: 0;
+  padding-bottom: 10rem;
+  .nova-text {
     position: absolute;
-    background: red;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    bottom: 0rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   p {
     position: relative;
@@ -253,8 +258,6 @@ p {
     backdrop-filter: blur(5px);
     border-radius: 10px;
     padding: 2rem;
-    margin-inline: auto;
-    top: -9rem;
     transform: translateX(0rem);
     transition: 2s ease-in-out;
   }
@@ -265,63 +268,9 @@ p {
     transform: translateX(15rem);
     z-index: 7;
   }
-  .nova-normal,
-  .nova-second,
-  .nova-bots {
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
-  }
-  .normal-anim {
-    visibility: visible;
-    left: 0rem;
-    top: 68rem;
-    height: 55rem;
-    object-fit: cover;
-    opacity: 1;
-  }
-  .second-anim {
-    visibility: visible;
-    left: 0rem;
-    top: 68rem;
-    height: 55rem;
-    object-fit: cover;
-    animation: secondlayer 20s alternate infinite;
-  }
-  @keyframes secondlayer {
-    0% {
-      opacity: 0%;
-    }
-    50% {
-      opacity: 100%;
-    }
-    100% {
-      opacity: 100%;
-    }
-  }
-  .bots-anim {
-    visibility: visible;
-    left: 0rem;
-    top: 68rem;
-    height: 55rem;
-    object-fit: cover;
-    animation: thirdlayer 20s alternate infinite;
-  }
-  @keyframes thirdlayer {
-    0% {
-      opacity: 0%;
-    }
-    50% {
-      opacity: 0%;
-    }
-    100% {
-      opacity: 100%;
-    }
-  }
   .nova-trans {
     position: absolute;
-    top: 64rem;
+    bottom: -8rem;
     height: 70rem;
     transform: translateX(-10rem);
     z-index: 6;
@@ -329,37 +278,89 @@ p {
   }
   .trans-anim {
     height: 83rem;
-    transform: translateX(65rem);
-  }
-  .trans-anim:hover {
-    height: 100rem;
-    top: 53rem;
+    transform: translateX(54vw);
   }
 }
-.wire-one-anim {
-  position: absolute;
-  left: 44rem;
-  top: 68rem;
+.nova-three {
+  position: relative;
+  display: flex;
+  gap: 1rem;
   height: 55rem;
-  object-fit: cover;
 }
-.wire-two-anim {
-  position: absolute;
-  right: 0rem;
-  top: 68rem;
+
+.nova-transition {
   height: 55rem;
+  position: relative;
+}
+.nova-transition::before {
+  content: "";
+  display: block;
+  height: 55rem;
+  width: 36rem;
+  position: relative;
+}
+.nova-normal,
+.nova-second,
+.nova-bots {
+  visibility: hidden;
+  position: absolute;
+  height: 55rem;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+.normal-anim {
+  visibility: visible;
   object-fit: cover;
+  top: 0;
+  opacity: 1;
+}
+.second-anim {
+  visibility: visible;
+  object-fit: cover;
+  top: 0;
+  animation: secondlayer 20s alternate infinite;
+}
+@keyframes secondlayer {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.bots-anim {
+  visibility: visible;
+  object-fit: cover;
+  top: 0;
+  animation: thirdlayer 20s alternate infinite;
+}
+@keyframes thirdlayer {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 .printing {
   position: relative;
   margin-bottom: -10rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   .tech-final {
-    width: 82rem;
+    width: 100%;
+    height: fit-content;
   }
   .model-aspect {
     position: absolute;
-    top: 47rem;
-    left: 10rem;
+    bottom: 0rem;
+    z-index: 1;
   }
   .tech-model {
     width: 60rem;
@@ -367,18 +368,90 @@ p {
     object-fit: cover;
     border-radius: 1000vw;
   }
-  .printing-text {
-    position: absolute;
-    margin-inline: auto;
-    top: -2.5rem;
-    right: 0rem;
-    margin-bottom: -10rem;
-  }
   p {
-    max-width: 30rem;
+    position: relative;
     background-color: #ffffff75;
     backdrop-filter: blur(5px);
     border-radius: 10px;
     padding: 2rem;
+    z-index: 25;
   }
+}
+@media screen and (max-width: 1200px) {
+  .blender {
+    .about-me {
+      p:nth-of-type(1) {
+        left: 0rem;
+      }
+      p:nth-of-type(4) {
+        left: 0rem;
+      }
+    }
+    .doughnut-anim {
+      height: 34rem;
+      width: 59rem;
+      object-position: 3rem 0;
+    }
+    @keyframes doughnut {
+      from {
+        transform: translateX(-60rem);
+      }
+      to {
+        transform: translateX(-10rem);
+      }
+    }
+    .cup-anim {
+      height: 24rem;
+      width: 24rem;
+      object-position: -10rem 0;
+    }
+    @keyframes cup {
+      from {
+        transform: translateX(30rem);
+      }
+      to {
+        transform: translateX(5rem);
+      }
+    }
+  }
+  .nintrondo {
+    .tron-text {
+      max-width: 100%;
+      top: 0rem;
+    }
+    .light-anim {
+      visibility: hidden;
+    }
+    .day-anim {
+      visibility: hidden;
+    }
+    .dark-anim {
+      animation: dark-tron 7s linear;
+      animation-fill-mode: forwards;
+    }
+    @keyframes dark-tron {
+      from {
+        transform: translateY(10rem);
+        object-position: 0rem 10rem;
+      }
+      to {
+        transform: translateY(2rem);
+        object-position: 0rem 2rem;
+      }
+    }
+  }
+  .nova {
+    .nova-top-anim {
+      transform: translateX(0rem);
+    }
+    .nova-bot-anim {
+      transform: translateX(0rem);
+    }
+    .nova-text-mid {
+      z-index: 7;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
 }
