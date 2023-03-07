@@ -22,10 +22,11 @@ const blenderObserver = new IntersectionObserver(function (
 
 blenderObserver.observe(Obs);
 
+const exampleObs = document.querySelector(".ex-obs")
 const doughnut = document.querySelector(".doughnut")
 const cup = document.querySelector(".cup")
 const earlyOptions = {
-  rootMargin: "0px 0px -800px 0px"
+  rootMargin: "0px 0px 0px 0px"
 }
 
 const earlyObs = new IntersectionObserver(function (
@@ -40,7 +41,7 @@ const earlyObs = new IntersectionObserver(function (
   });
 }, earlyOptions);
 
-earlyObs.observe(Obs);
+earlyObs.observe(exampleObs);
 
 const tronObs = document.querySelector(".tron-observer");
 const dark = document.querySelector(".dark-tron");
@@ -48,7 +49,7 @@ const light = document.querySelector(".light-tron");
 const day = document.querySelector(".day-tron");
 
 const tronOptions = {
-  rootMargin: "0px 0px -100px 0px"
+  rootMargin: "0px 0px 0px 0px"
 }
 
 const tronObserver = new IntersectionObserver(function (

@@ -76,25 +76,28 @@ p {
       position: relative;
       text-align: justify;
     }
-    p:nth-of-type(1) {
+    .top-text {
       left: -15rem;
       background-color: #ffffff75;
       backdrop-filter: blur(5px);
       border-radius: 10px;
       padding: 2rem;
     }
-    p:nth-of-type(3) {
+    .below-blender {
       margin-top: -15rem;
       background: none;
     }
-    p:nth-of-type(4) {
+    .ex-obs {
       left: 15rem;
       background-color: #ffffff75;
       backdrop-filter: blur(5px);
       border-radius: 10px;
       padding: 2rem;
     }
-
+    .middle-text {
+      display: flex;
+      flex-direction: column;
+    }
     .blender-observer::before {
       content: "";
       position: absolute;
@@ -113,6 +116,10 @@ p {
       transform: scale(0.7);
       visibility: hidden;
       z-index: 5;
+    }
+    .full-logo {
+      position: absolute;
+      display: none;
     }
     .ble-anim {
       visibility: visible;
@@ -352,7 +359,9 @@ p {
   position: relative;
   margin-bottom: -10rem;
   display: grid;
+  column-gap: 1rem;
   grid-template-columns: 1fr 1fr;
+  z-index: 7;
   .tech-final {
     width: 100%;
     height: fit-content;
@@ -360,11 +369,12 @@ p {
   .model-aspect {
     position: absolute;
     bottom: 0rem;
+    left: 5rem;
     z-index: 1;
   }
   .tech-model {
-    width: 60rem;
-    height: 60rem;
+    width: 35rem;
+    height: 35rem;
     object-fit: cover;
     border-radius: 1000vw;
   }
@@ -380,10 +390,10 @@ p {
 @media screen and (max-width: 1200px) {
   .blender {
     .about-me {
-      p:nth-of-type(1) {
+      .top-text {
         left: 0rem;
       }
-      p:nth-of-type(4) {
+      .ex-obs {
         left: 0rem;
       }
     }
@@ -454,4 +464,70 @@ p {
 }
 
 @media screen and (max-width: 800px) {
+  .blender {
+    .about-me {
+      .blender-observer::before {
+        height: 220%;
+      }
+      .blender-observer {
+        padding-bottom: 3rem;
+      }
+      .ble-anim,
+      .nder-anim {
+        visibility: hidden;
+      }
+
+      .full-logo {
+        display: block;
+        width: 33rem;
+        margin-top: -54%;
+        z-index: 10;
+      }
+      .below-blender {
+        margin-top: -28%;
+      }
+    }
+  }
+  .nintrondo {
+    @keyframes dark-tron {
+      from {
+        transform: translateY(10rem);
+        object-position: 0rem 10rem;
+      }
+      to {
+        transform: translateY(2rem);
+        object-position: -10rem 5rem;
+      }
+    }
+  }
+  .nova {
+    .nova-text {
+      z-index: 20;
+    }
+    .nova-text-mid {
+      z-index: 7;
+    }
+    .trans-anim {
+      transform: translateX(34vw);
+    }
+    .nova-text {
+      position: relative;
+    }
+  }
+  .normal-anim,
+  .second-anim,
+  .bots-anim {
+    visibility: hidden;
+  }
+  .nova-three {
+    display: none;
+  }
+  .printing {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    .model-aspect {
+      position: relative;
+      left: auto;
+    }
+  }
 }
