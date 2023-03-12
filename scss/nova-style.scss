@@ -244,15 +244,13 @@ p {
   }
 }
 .nova {
-  overflow: hidden;
   position: relative;
   padding-bottom: 10rem;
   .nova-text {
     position: absolute;
     left: 0;
     right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
     width: max-content;
     bottom: 0rem;
     display: flex;
@@ -457,6 +455,9 @@ p {
     }
     .nova-bot-anim {
       transform: translateX(0rem);
+    }
+    .nova-text {
+      width: 100vw;
     }
     .nova-text-mid {
       z-index: 7;
