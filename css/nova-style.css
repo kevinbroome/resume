@@ -230,9 +230,10 @@ p {
 
 /* line 246, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
 .nova {
+  overflow: hidden;
   position: relative;
   padding-bottom: 10rem; }
-  /* line 249, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 250, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nova .nova-text {
     position: absolute;
     left: 0;
@@ -244,7 +245,7 @@ p {
     display: flex;
     justify-content: center;
     flex-direction: column; }
-  /* line 261, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 262, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nova p {
     position: relative;
     max-width: 30rem;
@@ -254,14 +255,14 @@ p {
     padding: 2rem;
     transform: translateX(0rem);
     transition: 2s ease-in-out; }
-  /* line 271, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 272, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nova .nova-top-anim {
     transform: translateX(-15rem); }
-  /* line 274, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 275, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nova .nova-bot-anim {
     transform: translateX(15rem);
     z-index: 7; }
-  /* line 278, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 279, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nova .nova-trans {
     position: absolute;
     bottom: -8rem;
@@ -269,24 +270,24 @@ p {
     transform: translateX(-10rem);
     z-index: 6;
     transition: 2s ease-in-out; }
-  /* line 286, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 287, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nova .trans-anim {
     height: 83rem;
     transform: translateX(54vw); }
 
-/* line 291, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+/* line 292, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
 .nova-three {
   position: relative;
   display: flex;
   gap: 1rem;
   height: 55rem; }
 
-/* line 298, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+/* line 299, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
 .nova-transition {
   height: 55rem;
   position: relative; }
 
-/* line 302, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+/* line 303, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
 .nova-transition::before {
   content: "";
   display: block;
@@ -294,7 +295,7 @@ p {
   width: 36rem;
   position: relative; }
 
-/* line 309, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+/* line 310, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
 .nova-normal,
 .nova-second,
 .nova-bots {
@@ -304,14 +305,14 @@ p {
   opacity: 0;
   transition: opacity 2s ease-in-out; }
 
-/* line 318, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+/* line 319, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
 .normal-anim {
   visibility: visible;
   object-fit: cover;
   top: 0;
   opacity: 1; }
 
-/* line 324, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+/* line 325, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
 .second-anim {
   visibility: visible;
   object-fit: cover;
@@ -326,7 +327,7 @@ p {
   100% {
     opacity: 100%; } }
 
-/* line 341, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+/* line 342, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
 .bots-anim {
   visibility: visible;
   object-fit: cover;
@@ -341,7 +342,7 @@ p {
   100% {
     opacity: 100%; } }
 
-/* line 358, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+/* line 359, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
 .printing {
   position: relative;
   margin-bottom: -10rem;
@@ -349,23 +350,23 @@ p {
   column-gap: 1rem;
   grid-template-columns: 1fr 1fr;
   z-index: 7; }
-  /* line 365, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 366, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .printing .tech-final {
     width: 100%;
     height: fit-content; }
-  /* line 369, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 370, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .printing .model-aspect {
     position: absolute;
     bottom: 0rem;
     left: 5rem;
     z-index: 1; }
-  /* line 375, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 376, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .printing .tech-model {
     width: 35rem;
     height: 35rem;
     object-fit: cover;
     border-radius: 1000vw; }
-  /* line 381, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 382, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .printing p {
     position: relative;
     background-color: #ffffff75;
@@ -375,13 +376,13 @@ p {
     z-index: 25; }
 
 @media screen and (max-width: 1200px) {
-  /* line 393, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 394, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .blender .about-me .top-text {
     left: 0rem; }
-  /* line 396, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 397, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .blender .about-me .ex-obs {
     left: 0rem; }
-  /* line 400, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 401, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .blender .doughnut-anim {
     height: 34rem;
     width: 59rem;
@@ -391,7 +392,7 @@ p {
       transform: translateX(-60rem); }
     to {
       transform: translateX(-10rem); } }
-  /* line 413, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 414, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .blender .cup-anim {
     height: 24rem;
     width: 24rem;
@@ -401,17 +402,17 @@ p {
       transform: translateX(30rem); }
     to {
       transform: translateX(5rem); } }
-  /* line 428, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 429, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nintrondo .tron-text {
     max-width: 100%;
     top: 0rem; }
-  /* line 432, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 433, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nintrondo .light-anim {
     visibility: hidden; }
-  /* line 435, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 436, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nintrondo .day-anim {
     visibility: hidden; }
-  /* line 438, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 439, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nintrondo .dark-anim {
     animation: dark-tron 7s linear;
     animation-fill-mode: forwards; }
@@ -422,34 +423,34 @@ p {
     to {
       transform: translateY(2rem);
       object-position: 0rem 2rem; } }
-  /* line 454, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 455, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nova .nova-top-anim {
     transform: translateX(0rem); }
-  /* line 457, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 458, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nova .nova-bot-anim {
     transform: translateX(0rem); }
-  /* line 460, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 461, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nova .nova-text-mid {
     z-index: 7; } }
 
 @media screen and (max-width: 800px) {
-  /* line 469, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 470, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .blender .about-me .blender-observer::before {
     height: 220%; }
-  /* line 472, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 473, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .blender .about-me .blender-observer {
     padding-bottom: 3rem; }
-  /* line 475, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 476, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .blender .about-me .ble-anim,
   .blender .about-me .nder-anim {
     visibility: hidden; }
-  /* line 480, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 481, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .blender .about-me .full-logo {
     display: block;
     width: 33rem;
     margin-top: -54%;
     z-index: 10; }
-  /* line 486, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 487, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .blender .about-me .below-blender {
     margin-top: -28%; }
   @keyframes dark-tron {
@@ -459,31 +460,31 @@ p {
     to {
       transform: translateY(2rem);
       object-position: -10rem 5rem; } }
-  /* line 504, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 505, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nova .nova-text {
     z-index: 20; }
-  /* line 507, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 508, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nova .nova-text-mid {
     z-index: 7; }
-  /* line 510, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 511, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nova .trans-anim {
     transform: translateX(34vw); }
-  /* line 513, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 514, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nova .nova-text {
     position: relative; }
-  /* line 517, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 518, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .normal-anim,
   .second-anim,
   .bots-anim {
     visibility: hidden; }
-  /* line 522, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 523, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .nova-three {
     display: none; }
-  /* line 525, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+  /* line 526, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
   .printing {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr; }
-    /* line 528, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
+    /* line 529, ../../../../xampp/htdocs/resume/scss/nova-style.scss */
     .printing .model-aspect {
       position: relative;
       left: auto; } }
