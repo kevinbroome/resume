@@ -165,7 +165,7 @@ body {
   }
 
   .main {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-inline: auto;
     overflow: hidden;
     margin-top: -50rem;
@@ -179,7 +179,7 @@ body {
 
     .card {
       margin-inline: auto;
-      padding-inline: clamp(4.625rem, 7%, 10%);
+      padding-inline: clamp(4.625rem, 8%, 10%);
 
       p,
       li,
@@ -195,7 +195,7 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      overflow-y: hidden;
+      overflow: hidden;
 
       .about {
         font-size: 19rem;
@@ -217,14 +217,14 @@ body {
 
       .flex-wrapper {
         margin-inline: auto;
-        margin-top: 14.5rem;
+        margin-top: 9.5rem;
         display: flex;
         justify-content: center;
-        gap: 4rem;
+        gap: 3vw;
         max-width: 83rem;
         .left-wrapper {
           max-width: 55rem;
-          margin-top: 0;
+          flex-shrink: 3;
         }
         .skills {
           display: flex;
@@ -287,16 +287,40 @@ body {
       h5 {
         color: #551717;
       }
-
-      // .heading {
-      //   --outline-color: #000;
-      //   background: linear-gradient(45deg, var(--darkest), var(--accent));
-      //   background-size: 800%;
-      //   background-clip: text;
-      //   -webkit-background-clip: text;
-      //   animation: head-animate 20s alternate infinite;
-      //   color: transparent;
-      // }
+      .slide {
+        width: 83rem;
+        text-align: center;
+        overflow: hidden;
+      }
+      .carousel-inner {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+      }
+      .carousel-inner::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      .carousel-inner::-webkit-scrollbar-thumb {
+        background: black;
+        border-radius: 10px;
+      }
+      .carousel-inner::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .carousel-item {
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        width: 83rem;
+        background: #eee;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+      }
     }
 
     .community {
