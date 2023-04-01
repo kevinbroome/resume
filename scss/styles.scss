@@ -6,7 +6,7 @@ body {
   --darkest: #242526;
   --mid-tone: #292929;
   --light-tone: #505253;
-  --accent: #a52a2a;
+  --accent: #df9f3c;
 }
 
 //shaded background for info bar
@@ -84,12 +84,14 @@ body {
     cursor: pointer;
     padding: 1rem;
     border-radius: 50%;
+    transition: 0.2s ease-in-out;
 
     &:hover,
     &:focus {
       color: var(--accent);
       text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000,
         1px 1px 2px #000;
+      transform: scale(1.5);
     }
 
     &:visited {
@@ -140,28 +142,21 @@ body {
 }
 
 .section {
-  .nova {
-    text-decoration: none;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
-  }
+  // .nova {
+  //   text-decoration: none;
+  //   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  //     "Lucida Sans", Arial, sans-serif;
+  // }
 
   p,
   li {
     font-family: "Noto Sans", sans-serif;
     font-weight: 300;
-    text-align: justify;
     list-style-type: circle;
   }
 
   li {
     text-align: left;
-  }
-
-  .divider {
-    background: linear-gradient(to right, #a52a2a, #a52a2a00);
-    border: 0;
-    height: 0.125rem;
   }
 
   .main {
@@ -200,6 +195,7 @@ body {
       .about {
         font-size: 19rem;
         font-weight: 1000;
+        font-kerning: none;
         position: absolute;
         top: 0;
         left: 0;
@@ -275,26 +271,49 @@ body {
       background-image: url("/resume/kiwihug-MS9Tnh3if1o-unsplash.jpg");
       background-size: cover;
       padding-block: 8rem;
+      position: relative;
+      overflow: hidden;
+
+      .exp {
+        transform: rotate(-90deg);
+        font-size: 9rem;
+        font-weight: 1000;
+        position: absolute;
+        top: 20.5rem;
+        left: -18rem;
+        margin-block: 2rem;
+        --outline-color: #000;
+        background: linear-gradient(45deg, #fff, #5e4026);
+        background-size: 800%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        animation: head-animate 20s alternate infinite;
+        color: transparent;
+      }
 
       p,
       li {
-        font-weight: 500;
-        color: var(--darkest);
+        font-weight: 300;
+        color: #000;
       }
 
       h3,
       h4,
       h5 {
-        color: #551717;
+        color: #000;
       }
+
       .slide {
-        width: 83rem;
-        text-align: center;
+        max-width: 83rem;
         overflow: hidden;
+        left: 0;
+        right: 0;
+        margin-inline: auto;
       }
       .carousel-inner {
         display: flex;
-        overflow-x: auto;
+        overflow-x: scroll;
+        scrollbar-color: #5e4026 #00000000;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
@@ -304,22 +323,21 @@ body {
         height: 10px;
       }
       .carousel-inner::-webkit-scrollbar-thumb {
-        background: black;
+        background: #5e4026;
         border-radius: 10px;
       }
+
       .carousel-inner::-webkit-scrollbar-track {
         background: transparent;
       }
       .carousel-item {
         scroll-snap-align: start;
         flex-shrink: 0;
-        width: 83rem;
-        background: #eee;
+        max-width: 72rem;
+        margin-right: 50px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size: 1rem;
+        font-size: 1.5rem;
       }
     }
 
