@@ -1,57 +1,28 @@
 
 const splashPage = document.querySelector(".splash-page")
 
-/**
- * skill grid and shading anim
- */
-(function () {
-  const infoBar = document.querySelector(".info-bar")
-  const skillReveal = document.querySelector(".skill-grid")
-  const splashOptions = {
-    rootMargin: "-200px 0px 0px 0px"
-  }
+//skill grid and shading anim
+const infoBar = document.querySelector(".info-bar")
+const splashOptions = {
+  rootMargin: "-200px 0px 0px 0px"
+}
 
-  const shadeObserver = new IntersectionObserver(function (
-    entries,
-    shadeObserver
-  ) {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-        infoBar.classList.add("shade-header");
-        infoBar.classList.remove("black")
-        skillReveal.classList.add("skill-reveal");
-      } else {
-        infoBar.classList.remove("shade-header");
-        infoBar.classList.add("black")
-      }
-    });
-  }, splashOptions);
-
-  shadeObserver.observe(splashPage);
-})();
-
-//accent stripe anim
-const stripe = document.querySelector(".stripe")
-const revealOptions = {
-  rootMargin: "-600px 0px 0px 0px"
-};
-
-const stripeObserver = new IntersectionObserver(function (
+const shadeObserver = new IntersectionObserver(function (
   entries,
-  stripeObserver
+  shadeObserver
 ) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
-      stripe.classList.add("stripe-anim")
-
+      infoBar.classList.add("shade-header");
+      infoBar.classList.remove("black")
     } else {
-      stripe.classList.remove("stripe-anim");
+      infoBar.classList.remove("shade-header");
+      infoBar.classList.add("black")
     }
   });
-},
-  revealOptions);
+}, splashOptions);
+shadeObserver.observe(splashPage);
 
-stripeObserver.observe(splashPage);
 
 window.addEventListener("scroll", function () {
 
