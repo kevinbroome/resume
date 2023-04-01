@@ -1,34 +1,29 @@
 
 const splashPage = document.querySelector(".splash-page")
 
-/**
- * skill grid and shading anim
- */
-(function () {
-  const infoBar = document.querySelector(".info-bar")
-  const skillReveal = document.querySelector(".skill-grid")
-  const splashOptions = {
-    rootMargin: "-200px 0px 0px 0px"
-  }
+//skill grid and shading anim
+const infoBar = document.querySelector(".info-bar")
+const skillReveal = document.querySelector(".skill-grid")
+const splashOptions = {
+  rootMargin: "-200px 0px 0px 0px"
+}
 
-  const shadeObserver = new IntersectionObserver(function (
-    entries,
-    shadeObserver
-  ) {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-        infoBar.classList.add("shade-header");
-        infoBar.classList.remove("black")
-        skillReveal.classList.add("skill-reveal");
-      } else {
-        infoBar.classList.remove("shade-header");
-        infoBar.classList.add("black")
-      }
-    });
-  }, splashOptions);
-
-  shadeObserver.observe(splashPage);
-})();
+const shadeObserver = new IntersectionObserver(function (
+  entries,
+  shadeObserver
+) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      infoBar.classList.add("shade-header");
+      infoBar.classList.remove("black")
+      skillReveal.classList.add("skill-reveal");
+    } else {
+      infoBar.classList.remove("shade-header");
+      infoBar.classList.add("black")
+    }
+  });
+}, splashOptions);
+shadeObserver.observe(splashPage);
 
 //accent stripe anim
 const stripe = document.querySelector(".stripe")
