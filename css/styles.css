@@ -70,14 +70,14 @@ body {
     border-radius: 50%;
     transition: 0.2s ease-in-out; }
     /* line 89, ../../../../xampp/htdocs/resume/scss/styles.scss */
-    .info-bar a:hover, .info-bar a:focus {
+    .info-bar a:hover {
       color: var(--accent);
       text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
       transform: scale(1.5); }
-    /* line 97, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    /* line 96, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .info-bar a:visited {
       color: var(--heading-color); }
-  /* line 102, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 101, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .info-bar .socials {
     margin-top: -2rem;
     display: flex;
@@ -86,40 +86,40 @@ body {
     padding-inline: 5px;
     gap: 0.8rem;
     z-index: 100; }
-    /* line 111, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    /* line 110, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .info-bar .socials a:hover {
       color: var(--accent); }
 
-/* line 120, ../../../../xampp/htdocs/resume/scss/styles.scss */
+/* line 119, ../../../../xampp/htdocs/resume/scss/styles.scss */
 .black .contact h1,
 .black .contact a {
   color: #000; }
 
-/* line 127, ../../../../xampp/htdocs/resume/scss/styles.scss */
+/* line 126, ../../../../xampp/htdocs/resume/scss/styles.scss */
 .black .socials a {
   color: #000; }
 
-/* line 134, ../../../../xampp/htdocs/resume/scss/styles.scss */
+/* line 133, ../../../../xampp/htdocs/resume/scss/styles.scss */
 body {
   background-color: var(--darkest); }
-  /* line 137, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 136, ../../../../xampp/htdocs/resume/scss/styles.scss */
   body h3,
   body h4,
   body h5 {
     color: var(--heading-color); }
 
-/* line 151, ../../../../xampp/htdocs/resume/scss/styles.scss */
+/* line 150, ../../../../xampp/htdocs/resume/scss/styles.scss */
 .section p,
 .section li {
   font-family: "Noto Sans", sans-serif;
   font-weight: 300;
   list-style-type: circle; }
 
-/* line 158, ../../../../xampp/htdocs/resume/scss/styles.scss */
+/* line 157, ../../../../xampp/htdocs/resume/scss/styles.scss */
 .section li {
   text-align: left; }
 
-/* line 162, ../../../../xampp/htdocs/resume/scss/styles.scss */
+/* line 161, ../../../../xampp/htdocs/resume/scss/styles.scss */
 .section .main {
   font-size: 1.5rem;
   margin-inline: auto;
@@ -127,21 +127,21 @@ body {
   margin-top: -50rem;
   background-color: #242526;
   color: var(--text-color); }
-  /* line 170, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 169, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .section .main .splash-page {
     min-height: 67.5rem;
     background-image: url(/resume/assets/launchpadhero.webp); }
-  /* line 175, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 174, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .section .main .card {
     margin-inline: auto;
     padding-inline: clamp(4.625rem, 8%, 10%); }
-    /* line 179, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    /* line 178, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .section .main .card p,
     .section .main .card li,
     .section .main .card h4 {
       position: relative;
       z-index: 1; }
-  /* line 187, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 186, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .section .main .about-me {
     position: relative;
     min-height: 100vh;
@@ -149,11 +149,12 @@ body {
     flex-direction: column;
     justify-content: center;
     overflow: hidden; }
-    /* line 195, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    /* line 194, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .section .main .about-me .about {
       font-size: 19rem;
       font-weight: 1000;
-      font-kerning: none;
+      letter-spacing: -1rem;
+      width: fit-content;
       position: absolute;
       top: 0;
       left: 0;

@@ -86,8 +86,7 @@ body {
     border-radius: 50%;
     transition: 0.2s ease-in-out;
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: var(--accent);
       text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000,
         1px 1px 2px #000;
@@ -195,7 +194,8 @@ body {
       .about {
         font-size: 19rem;
         font-weight: 1000;
-        font-kerning: none;
+        letter-spacing: -1rem;
+        width: fit-content;
         position: absolute;
         top: 0;
         left: 0;
