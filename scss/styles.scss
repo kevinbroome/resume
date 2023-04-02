@@ -273,22 +273,23 @@ body {
       padding-block: 8rem;
       position: relative;
       overflow: hidden;
-
-      .exp {
-        transform: rotate(-90deg);
-        font-size: 9rem;
-        font-weight: 1000;
+      .exp-wrapper {
         position: absolute;
-        top: 20.5rem;
-        left: -18rem;
+        top: 3rem;
+        left: 0;
         margin-block: 2rem;
-        --outline-color: #000;
-        background: linear-gradient(45deg, #fff, #5e4026);
-        background-size: 800%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        animation: head-animate 20s alternate infinite;
-        color: transparent;
+        width: 12.5rem;
+        overflow: hidden;
+      }
+      .exp {
+        position: relative;
+        letter-spacing: -2.75rem;
+        left: -2rem;
+        font-size: 6rem;
+        font-weight: 1000;
+        color: #5e4026;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
       }
 
       p,
@@ -431,19 +432,19 @@ body {
       }
     }
 
-    .heading {
-      font-family: "Sofia Sans", sans-serif;
-      font-size: 2.5rem;
-      font-weight: 700;
-      z-index: 0;
-      width: fit-content;
-      background: linear-gradient(45deg, var(--text-color), var(--accent));
-      background-size: 800%;
-      background-clip: text;
-      -webkit-background-clip: text;
-      animation: head-animate 20s alternate infinite;
-      color: transparent;
-    }
+    // .heading {
+    //   font-family: "Sofia Sans", sans-serif;
+    //   font-size: 2.5rem;
+    //   font-weight: 700;
+    //   z-index: 0;
+    //   width: fit-content;
+    //   background: linear-gradient(45deg, var(--text-color), var(--accent));
+    //   background-size: 800%;
+    //   background-clip: text;
+    //   -webkit-background-clip: text;
+
+    //   color: transparent;
+    // }
 
     @keyframes head-animate {
       from {
