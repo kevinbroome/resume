@@ -6,11 +6,14 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
   <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;700&display=swap&family=Sofia+Sans:wght@400;500;700;1000&display=swap"
-    rel="stylesheet"
-  />
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+/>
 
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,58 +23,35 @@
   </head>
 
   <body ontouchstart="">
-    <section class="section">
-      <div class="container info-bar black">
-        <div class="contact">
-          <p class="left">
-            <a
-              style="text-decoration: none"
-              href="mailto:kbroome88@gmail.com"
-              target="_blank"
-              >kbroome88@gmail.com</a
-            >
-          </p>
-          <h1 class="my-name">Kevin Broome</h1>
-          <p class="right">
-            <a
-              style="text-decoration: none"
-              href="tel:07783875541"
-              target="_blank"
-              >07783875541</a
-            >
-          </p>
+    <article class="full-page">
+      <div class="side-menu">
+        <div class="nLeft">
+          <div class="img-wrapper">
+            <img src="./assets/kb-black-texture.jpg" alt="">
+          </div>
+          <div class="menu">
+            <a href="#"><i class="fa fa-dot-circle-o" aria-hidden="true"></i>About Me</a>
+            <a href="#"><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Projects</a>
+            <a href="#"><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Skills</a>
+            <a href="#"><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Experience</a>
+          </div>
         </div>
-        <div class="container socials">
-          <a
-            href="https://www.facebook.com/Coemgein"
-            style="text-decoration: none"
-            target="_blank"
-            class="fa fa-facebook"
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/kevinbroome1988/"
-            style="text-decoration: none"
-            target="_blank"
-            class="fa fa-linkedin"
-          ></a>
-          <a
-            href="https://www.instagram.com/neon.n.o.v.a/"
-            style="text-decoration: none"
-            target="_blank"
-            class="fa fa-instagram"
-          ></a>
-          <a
-            href="https://cults3d.com/en/users/vividminimods/creations"
-            style="text-decoration: none"
-            target="_blank"
-            class="fa fa-cube"
-          ></a>
+        <div class="nRight">
+          <div class="img-wrapper">
+            <img src="./assets/kb-black-texture.jpg" alt="">
+          </div>
         </div>
       </div>
 
+
       <section class="container main">
-        <div class="splash-page"></div>
-        <div class="about-me card">
+        <div class="hero">
+          <div class="hero-text">
+            <h1 class="hero-heading">Kevin Broome</h1>
+            <h2 class="hero-subheading">Quality Control Supervisor</h2>
+          </div>
+        </div>
+        <div class="about-me ">
           <h2 class="heading about">About Me</h2>
           <div class="flex-wrapper">
             <div class="left-wrapper">
@@ -109,14 +89,14 @@
           <div class="right-grad"></div>
         </div>
 
-        <div class="experience card">
+        <div class="experience ">
           <div class="exp-wrapper" style="height: 20px">
             <h2 class="heading exp">Experience</h2>
           </div>
 
           <div class="carousel slide">
             <div class="carousel-inner">
-              <div class="card carousel-item">
+              <div class=" carousel-item">
                 <div class="space">
                   <h3 class="main-title">Quality Control Supervisor</h3>
                   <h5 class="dates">Nov 2015 - Present</h5>
@@ -146,7 +126,7 @@
                 </ul>
               </div>
 
-              <div class="card carousel-item">
+              <div class=" carousel-item">
                 <div class="space">
                   <h3 class="main-title">Dye Room Technician</h3>
                   <h5 class="dates">Nov 2012 - Nov 2015</h5>
@@ -166,7 +146,7 @@
                 </p>
               </div>
 
-              <div class="card carousel-item">
+              <div class=" carousel-item">
                 <div class="space">
                   <h3 class="main-title">Warehouse Associate</h3>
                   <h5 class="dates">Aug 2012 - Nov 2012</h5>
@@ -189,7 +169,7 @@
                 </p>
               </div>
 
-              <div class="card carousel-item">
+              <div class=" carousel-item">
                 <div class="space">
                   <h3 class="main-title">Administrative Assistant</h3>
                   <h5 class="dates">Nov 2009 - Jul 2010</h5>
@@ -220,7 +200,7 @@
           </div>
         </div>
 
-        <div class="community card">
+        <div class="community ">
           <h2 class="heading comm comm-head">Community</h2>
 
           <div class="aas">
@@ -270,9 +250,8 @@
             </p>
           </div>
         </div>
-        <br /><br />
 
-        <div class="education card">
+        <div class="education ">
           <h2 class="heading edu">Education & Training</h2>
 
           <div class="edu iop">
@@ -341,10 +320,10 @@
           </div>
         </div>
       </section>
-    </section>
+    </article>
   </body>
 
   <footer>
-    <script src="scripts.js"></script>
+    <script src="./scripts.js"></script>
   </footer>
 </html>
