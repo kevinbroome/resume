@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = 'kbroome88' + '@' + 'gmail.com';
       emailLinks.forEach(emailLink => {
         emailLink.setAttribute('href', 'mailto:' + email);
-        emailLink.textContent = 'Mail me';
       });
     })();
   }, 1);
@@ -150,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Intersection Observer for .hero
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      const rightMenu = document.querySelector('.side-menu .nRight .socials');
+      const rightMenu = document.querySelector('.side-menu .kbRight .socials');
       if (entry.isIntersecting) {
         rightMenu.classList.remove('active');
       } else {
@@ -165,6 +164,46 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })();
 
+/**
+ * count up numbers
+ */
+(() => {
+  const animateCount = (element, target, updateFn) => {
+    const duration = 2000; // 2 seconds
+    const frameDuration = 1000 / 60; // 60 frames per second
+    const totalFrames = Math.round(duration / frameDuration);
+    let frame = 0;
+
+    const countUp = () => {
+      frame++;
+      const progress = frame / totalFrames;
+      const currentValue = Math.round(target * progress);
+      updateFn(element, currentValue);
+
+      if (frame < totalFrames) {
+        requestAnimationFrame(countUp);
+      }
+    };
+
+    requestAnimationFrame(countUp);
+  };
+
+  const numbers = document.querySelectorAll('.number-wrapper .number');
+  numbers.forEach(number => {
+    const target = +number.getAttribute('data-num');
+    animateCount(number, target, (el, value) => {
+      el.textContent = value;
+    });
+  });
+
+  const wrappers = document.querySelectorAll('.number-wrapper');
+  wrappers.forEach(wrapper => {
+    animateCount(wrapper, 100, (el, value) => {
+      el.setAttribute('data-percent', value);
+      el.style.setProperty('--rotation', `${(value / 100) * 360}deg`);
+    });
+  });
+})();
 // new Splide('#splide').mount();
 
 // gsap.to('#splide', {
