@@ -1,3 +1,8 @@
+import splide from '@splidejs/splide';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 //info-bar shading anim
 const splashPage = document.querySelector(".splash-page")
@@ -28,7 +33,7 @@ const wrapHeight = document.querySelector(".exp-wrapper");
 
 targetScroll.addEventListener("scroll", () => {
   const scrollDist = targetScroll.scrollLeft;
-  const heightAdj = scrollDist/5.8;
+  const heightAdj = scrollDist / 5.8;
   wrapHeight.style.height = `${heightAdj}px`
   console.log(scrollDist);
 })
