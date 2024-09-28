@@ -1,7 +1,3 @@
-import splide from '@splidejs/splide';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,4 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.full-page').classList.add('loaded');
     console.log('test');
   }, 1);
+});
+
+new Splide('#splide').mount();
+
+gsap.to('#splide', {
+  scrollTrigger: {
+    trigger: '#splide',
+    start: '0% top',
+    end: '200% top',
+    scrub: 1,
+    markers: true,
+  },
+  x: 100,
+  opacity: 0,
 });
