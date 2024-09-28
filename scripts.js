@@ -1,7 +1,5 @@
-gsap.registerPlugin(ScrollTrigger);
-
 /**
- * Adding DOm loaded animation
+ * Adding DOM loaded animation
  */
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
@@ -11,25 +9,37 @@ document.addEventListener('DOMContentLoaded', () => {
      * Obscure my email
      */
     (() => {
-      const emailLink = document.querySelector('.email');
+      const emailLinks = document.querySelectorAll('.email');
       const email = 'kbroome88' + '@' + 'gmail.com';
-      emailLink.setAttribute('href', 'mailto:' + email);
-      emailLink.textContent = 'Mail me';
+      emailLinks.forEach(emailLink => {
+        emailLink.setAttribute('href', 'mailto:' + email);
+        emailLink.textContent = 'Mail me';
+      });
     })();
   }, 1);
 });
 
-// Intersection Observer for .full-page
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    const fullPageElement = document.querySelector('.full-page');
-    if (entry.isIntersecting) {
-      fullPageElement.classList.remove('scroll');
-    } else {
-      fullPageElement.classList.add('scroll');
-    }
+/**
+ * Intersection Observer for .full-page
+ */
+(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const fullPageElement = document.querySelector('.full-page');
+      if (entry.isIntersecting) {
+        fullPageElement.classList.remove('scroll');
+      } else {
+        fullPageElement.classList.add('scroll');
+      }
+    });
   });
-});
+
+
+  const topElement = document.querySelector('.top');
+  if (topElement) {
+    observer.observe(topElement);
+  }
+})();
 
 /**
  * Hero BG Words
@@ -116,21 +126,55 @@ const observer = new IntersectionObserver((entries) => {
   }
 })();
 
-const topElement = document.querySelector('.top');
-if (topElement) {
-  observer.observe(topElement);
-}
+/**
+ * Hero follow GSAP
+ */
+(() => {
+  const hero = document.querySelector('.hero');
 
-new Splide('#splide').mount();
+  gsap.to(hero.querySelector('.details'), {
+    scrollTrigger: {
+      trigger: hero,
+      start: '50% center',
+      end: '100% center',
+      scrub: 3,
+    },
+    yPercent: 100,
+  });
+})();
 
-gsap.to('#splide', {
-  scrollTrigger: {
-    trigger: '#splide',
-    start: '0% top',
-    end: '200% top',
-    scrub: 1,
-    markers: true,
-  },
-  x: 100,
-  opacity: 0,
-});
+/**
+ * IntObs for right menu after hero
+ */
+(() => {
+  // Intersection Observer for .hero
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const rightMenu = document.querySelector('.side-menu .nRight .socials');
+      if (entry.isIntersecting) {
+        rightMenu.classList.remove('active');
+      } else {
+        rightMenu.classList.add('active');
+      }
+    });
+  });
+
+  const heroElement = document.querySelector('.hero');
+  if (heroElement) {
+    observer.observe(heroElement);
+  }
+})();
+
+// new Splide('#splide').mount();
+
+// gsap.to('#splide', {
+//   scrollTrigger: {
+//     trigger: '#splide',
+//     start: '0% top',
+//     end: '200% top',
+//     scrub: 1,
+//     markers: true,
+//   },
+//   x: 100,
+//   opacity: 0,
+// });
