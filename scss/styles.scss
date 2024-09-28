@@ -39,6 +39,7 @@ body {
 
 // Content Styles
 body {
+  scroll-behavior: smooth;
   margin: 0;
   width: 100%;
 
@@ -291,13 +292,18 @@ body {
 
     &.cults {
       i::before {
-        background-image: url("../assets/icons8-delicious.svg");
+        background-image: url("../assets/icons8-code-blocks.svg");
       }
     }
 
     &.github {
       i::before {
         background-image: url("../assets/icons8-github.svg");
+      }
+    }
+    &.email {
+      i::before {
+        background-image: url("../assets/icons8-gmail-logo.svg");
       }
     }
   }
