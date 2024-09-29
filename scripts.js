@@ -94,11 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
       { opacity: 0 },
       {
         opacity: 0.1,
-        duration: 3,
+        duration: 2,
         repeat: -1,
         yoyo: true,
         ease: 'power1.inOut',
-        delay: Math.random() * 3 + 1
+        delay: Math.random() * 5
       }
     );
 
@@ -168,42 +168,59 @@ document.addEventListener('DOMContentLoaded', () => {
  * count up numbers
  */
 (() => {
+  gsap.registerPlugin(ScrollTrigger);
+
   const animateCount = (element, target, updateFn) => {
-    const duration = 2000; // 2 seconds
-    const frameDuration = 1000 / 60; // 60 frames per second
-    const totalFrames = Math.round(duration / frameDuration);
-    let frame = 0;
-
-    const countUp = () => {
-      frame++;
-      const progress = frame / totalFrames;
-      const currentValue = Math.round(target * progress);
-      updateFn(element, currentValue);
-
-      if (frame < totalFrames) {
-        requestAnimationFrame(countUp);
+    const duration = 2; // 2 seconds in GSAP
+    gsap.to(element, {
+      duration: duration,
+      innerText: target,
+      roundProps: "innerText",
+      onUpdate: function () {
+        updateFn(element, this.targets()[0].innerText);
       }
-    };
-
-    requestAnimationFrame(countUp);
+    });
   };
 
   const numbers = document.querySelectorAll('.number-wrapper .number');
   numbers.forEach(number => {
     const target = +number.getAttribute('data-num');
-    animateCount(number, target, (el, value) => {
-      el.textContent = value;
+    ScrollTrigger.create({
+      trigger: number,
+      start: "10% bottom",
+      onEnter: () => {
+        animateCount(number, target, (el, value) => {
+          el.textContent = value;
+        });
+      }
     });
   });
 
   const wrappers = document.querySelectorAll('.number-wrapper');
   wrappers.forEach(wrapper => {
-    animateCount(wrapper, 100, (el, value) => {
-      el.setAttribute('data-percent', value);
-      el.style.setProperty('--rotation', `${(value / 100) * 360}deg`);
+    ScrollTrigger.create({
+      trigger: wrapper,
+      start: "10% bottom",
+      onEnter: () => {
+        gsap.to(wrapper, {
+          duration: 2,
+          '--rotation': '360deg',
+          onUpdate: function () {
+            const rotation = parseFloat(gsap.getProperty(wrapper, '--rotation'));
+            const percent = (rotation / 360) * 100;
+            wrapper.setAttribute('data-percent', percent.toFixed(0));
+          }
+        });
+
+        const accoladesItems = document.querySelectorAll('.accolades .item');
+        accoladesItems.forEach(item => {
+          item.classList.add('active');
+        });
+      }
     });
   });
 })();
+
 // new Splide('#splide').mount();
 
 // gsap.to('#splide', {
