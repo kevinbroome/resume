@@ -439,70 +439,71 @@ body {
     margin-top: 25px; }
     /* line 511, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .main .accolades .kbGrid.bot .item {
+      padding: 25px;
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25); }
-      /* line 513, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      /* line 514, ../../../../xampp/htdocs/resume/scss/styles.scss */
       .main .accolades .kbGrid.bot .item:nth-child(1) {
         transition: 0.35s ease 1s; }
-      /* line 517, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      /* line 518, ../../../../xampp/htdocs/resume/scss/styles.scss */
       .main .accolades .kbGrid.bot .item:nth-child(2) {
         transition: 0.35s ease 1.1s; }
-      /* line 521, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      /* line 522, ../../../../xampp/htdocs/resume/scss/styles.scss */
       .main .accolades .kbGrid.bot .item:nth-child(3) {
         transition: 0.35s ease 1.2s; }
-      /* line 527, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      /* line 528, ../../../../xampp/htdocs/resume/scss/styles.scss */
       .main .accolades .kbGrid.bot .item.active:nth-child(1) img {
         animation: grow-img 1s ease 2s; }
-      /* line 533, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      /* line 534, ../../../../xampp/htdocs/resume/scss/styles.scss */
       .main .accolades .kbGrid.bot .item.active:nth-child(2) img {
         animation: grow-img 1s ease 2.5s; }
-      /* line 539, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      /* line 540, ../../../../xampp/htdocs/resume/scss/styles.scss */
       .main .accolades .kbGrid.bot .item.active:nth-child(3) img {
         animation: grow-img 1s ease 3s; }
 
 @keyframes grow-img {
   50% {
     scale: 1.1; } }
-    /* line 550, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    /* line 551, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .main .accolades .kbGrid.bot .img-wrapper {
       display: flex;
       align-items: center;
       justify-content: center; }
-    /* line 555, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    /* line 556, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .main .accolades .kbGrid.bot h2 {
       font-family: var(--robo-con);
       font-weight: 300; }
 
-/* line 563, ../../../../xampp/htdocs/resume/scss/styles.scss */
+/* line 564, ../../../../xampp/htdocs/resume/scss/styles.scss */
 .main .anchor {
   position: relative;
   top: -150px; }
 
-/* line 569, ../../../../xampp/htdocs/resume/scss/styles.scss */
+/* line 570, ../../../../xampp/htdocs/resume/scss/styles.scss */
 .main .about-me .kbFlex {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 15px; }
-  /* line 575, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 576, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .main .about-me .kbFlex .text-section {
     flex-grow: 1; }
-    /* line 577, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    /* line 578, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .main .about-me .kbFlex .text-section .h2 {
       cursor: pointer;
       display: block;
       margin-bottom: 25px;
       color: #000; }
-      /* line 583, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      /* line 584, ../../../../xampp/htdocs/resume/scss/styles.scss */
       .main .about-me .kbFlex .text-section .h2:hover, .main .about-me .kbFlex .text-section .h2:focus-visible {
         text-decoration: none; }
-        /* line 587, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 588, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .main .about-me .kbFlex .text-section .h2:hover span::after, .main .about-me .kbFlex .text-section .h2:focus-visible span::after {
           background-color: var(--col-magenta); }
-      /* line 592, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      /* line 593, ../../../../xampp/htdocs/resume/scss/styles.scss */
       .main .about-me .kbFlex .text-section .h2 span {
         position: relative;
         display: inline-block; }
-        /* line 595, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 596, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .main .about-me .kbFlex .text-section .h2 span::after {
           content: "";
           position: absolute;
@@ -513,12 +514,12 @@ body {
           height: 3px;
           background-color: var(--text-color);
           transition: 0.35s ease; }
-  /* line 610, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 611, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .main .about-me .kbFlex .img-wrapper {
     flex-shrink: 0;
     width: 40%;
     background-color: cyan; }
-    /* line 615, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    /* line 616, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .main .about-me .kbFlex .img-wrapper.active {
       background-color: red; }
 

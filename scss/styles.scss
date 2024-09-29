@@ -509,6 +509,7 @@ body {
       &.bot {
         margin-top: 25px;
         .item {
+          padding: 25px;
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
           &:nth-child(1) {
             transition: 0.35s ease 1s;

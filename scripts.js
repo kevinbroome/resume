@@ -229,8 +229,8 @@ document.addEventListener('DOMContentLoaded', () => {
   gsap.to(accolades, {
     scrollTrigger: {
       trigger: accolades,
-      start: '25% top',
-      end: '100% top',
+      start: '75% center',
+      end: '125% center',
       scrub: 1,
     },
     y: -100,
@@ -263,8 +263,8 @@ document.addEventListener('DOMContentLoaded', () => {
   gsap.from(aboutMe.querySelectorAll('.text-section > *'), {
     scrollTrigger: {
       trigger: aboutMe,
-      start: '50% bottom',
-      end: '100% bottom',
+      start: '75% bottom',
+      end: '125% bottom',
       scrub: 1,
     },
     y: 100,
