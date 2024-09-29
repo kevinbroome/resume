@@ -64,46 +64,48 @@ body {
   body .m-bottom-half {
     margin-bottom: var(--spacing)/2; }
 
-/* line 41, ../../../../xampp/htdocs/resume/scss/styles.scss */
+/* line 40, ../../../../xampp/htdocs/resume/scss/styles.scss */
+html {
+  scroll-behavior: smooth; }
+
+/* line 45, ../../../../xampp/htdocs/resume/scss/styles.scss */
 body {
-  scroll-behavior: smooth;
   margin: 0;
   width: 100%; }
-  /* line 46, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 49, ../../../../xampp/htdocs/resume/scss/styles.scss */
   body p {
     font-family: "Roboto Condensed", sans-serif; }
-  /* line 50, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 53, ../../../../xampp/htdocs/resume/scss/styles.scss */
   body h1,
   body h2,
   body h3,
   body h4 {
     font-family: "Space Grotesk", sans-serif; }
 
-/* line 58, ../../../../xampp/htdocs/resume/scss/styles.scss */
+/* line 61, ../../../../xampp/htdocs/resume/scss/styles.scss */
 .full-page {
-  scroll-behavior: smooth;
   overflow-x: clip; }
-  /* line 64, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 66, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .full-page.loaded .side-menu {
     width: 25%; }
-    /* line 66, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    /* line 68, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .full-page.loaded .side-menu.left {
       left: 0; }
-    /* line 72, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    /* line 74, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .full-page.loaded .side-menu .kbLeft a {
       left: 0%; }
-  /* line 81, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 83, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .full-page.scroll .side-menu {
     width: 15%; }
-    /* line 83, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    /* line 85, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .full-page.scroll .side-menu.right {
       right: 0;
       transition: 1s ease 0.1s; }
-    /* line 88, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    /* line 90, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .full-page.scroll .side-menu .kbLeft .menu a {
       padding: 10px 0 10px 25px; }
 
-/* line 96, ../../../../xampp/htdocs/resume/scss/styles.scss */
+/* line 98, ../../../../xampp/htdocs/resume/scss/styles.scss */
 .side-menu {
   position: fixed;
   top: 0;
@@ -111,31 +113,31 @@ body {
   height: 100dvh;
   z-index: 1;
   transition: all 1s ease 0.1s; }
-  /* line 104, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 106, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .side-menu.left {
     left: -35%;
     transition: all 1s ease 0.1s, left 1s ease 0.5s; }
-  /* line 109, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 111, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .side-menu.right {
     width: 0%;
     right: -35%; }
-  /* line 114, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 116, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .side-menu .img-wrapper {
     position: absolute;
     width: 100%;
     height: 100%; }
-    /* line 118, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    /* line 120, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .side-menu .img-wrapper img {
       width: 100%;
       height: 100%;
       object-fit: cover; }
-  /* line 125, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 127, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .side-menu .kbLeft {
     position: relative;
     height: 100%;
     width: 100%;
     clip-path: polygon(0% 0%, 100% 0%, calc(100% - 100px) 100%, 0% 100%); }
-    /* line 131, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    /* line 133, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .side-menu .kbLeft .menu {
       position: relative;
       top: 50%;
@@ -143,7 +145,7 @@ body {
       left: 0;
       display: flex;
       flex-direction: column; }
-      /* line 139, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      /* line 141, ../../../../xampp/htdocs/resume/scss/styles.scss */
       .side-menu .kbLeft .menu a {
         position: relative;
         left: -100%;
@@ -152,27 +154,30 @@ body {
         background-color: rgba(255, 255, 255, 0.1);
         font-family: "Space Grotesk", sans-serif;
         color: var(--col-primary); }
-        /* line 148, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 150, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .side-menu .kbLeft .menu a:nth-child(1) {
           transition: all 0.35s ease, left 0.5s ease 1.5s, padding 1s ease; }
-        /* line 152, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 154, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .side-menu .kbLeft .menu a:nth-child(2) {
           transition: all 0.35s ease, left 0.5s ease 1.75s, padding 1s ease; }
-        /* line 156, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 158, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .side-menu .kbLeft .menu a:nth-child(3) {
           transition: all 0.35s ease, left 0.5s ease 2s, padding 1s ease; }
-        /* line 160, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 162, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .side-menu .kbLeft .menu a:nth-child(4) {
           transition: all 0.35s ease, left 0.5s ease 2.25s, padding 1s ease; }
-        /* line 164, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 166, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        .side-menu .kbLeft .menu a:nth-child(5) {
+          transition: all 0.35s ease, left 0.5s ease 2.5s, padding 1s ease; }
+        /* line 170, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .side-menu .kbLeft .menu a:hover, .side-menu .kbLeft .menu a:focus-visible {
           color: var(--col-magenta);
           text-decoration: none;
           background-color: rgba(255, 255, 255, 0); }
-        /* line 171, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 177, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .side-menu .kbLeft .menu a i {
           margin-right: 15px; }
-  /* line 178, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 184, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .side-menu .kbRight {
     position: absolute;
     top: 0;
@@ -180,7 +185,7 @@ body {
     width: 100%;
     height: 100%;
     clip-path: polygon(100% 0%, calc(0% + 100px) 0%, 0% 100%, 100% 100%); }
-    /* line 186, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    /* line 192, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .side-menu .kbRight .details {
       position: relative;
       bottom: 25px;
@@ -189,61 +194,61 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: end; }
-      /* line 196, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      /* line 202, ../../../../xampp/htdocs/resume/scss/styles.scss */
       .side-menu .kbRight .details .socials {
         flex-direction: column;
         align-items: end; }
-        /* line 200, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 206, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .side-menu .kbRight .details .socials a {
           position: relative;
           right: -150%; }
-        /* line 204, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 210, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .side-menu .kbRight .details .socials a:nth-child(1) {
           transition: 0.5s ease 0s; }
-        /* line 207, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 213, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .side-menu .kbRight .details .socials a:nth-child(2) {
           transition: 0.5s ease 0.05s; }
-        /* line 210, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 216, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .side-menu .kbRight .details .socials a:nth-child(3) {
           transition: 0.5s ease 0.1s; }
-        /* line 213, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 219, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .side-menu .kbRight .details .socials a:nth-child(4) {
           transition: 0.5s ease 0.15s; }
-        /* line 216, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 222, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .side-menu .kbRight .details .socials a:nth-child(5) {
           transition: 0.5s ease 0.2s; }
-        /* line 221, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 227, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .side-menu .kbRight .details .socials.active a {
           right: 0; }
-        /* line 224, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 230, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .side-menu .kbRight .details .socials.active a:nth-child(1) {
           transition: 0.5s ease 0.2s; }
-        /* line 227, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 233, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .side-menu .kbRight .details .socials.active a:nth-child(2) {
           transition: 0.5s ease 0.15s; }
-        /* line 230, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 236, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .side-menu .kbRight .details .socials.active a:nth-child(3) {
           transition: 0.5s ease 0.1s; }
-        /* line 233, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 239, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .side-menu .kbRight .details .socials.active a:nth-child(4) {
           transition: 0.5s ease 0.05s; }
-        /* line 236, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 242, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .side-menu .kbRight .details .socials.active a:nth-child(5) {
           transition: 0.5s ease 0s; }
-        /* line 241, ../../../../xampp/htdocs/resume/scss/styles.scss */
+        /* line 247, ../../../../xampp/htdocs/resume/scss/styles.scss */
         .side-menu .kbRight .details .socials .email {
           margin-top: 0; }
 
-/* line 249, ../../../../xampp/htdocs/resume/scss/styles.scss */
+/* line 255, ../../../../xampp/htdocs/resume/scss/styles.scss */
 .socials {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin-top: 20px; }
-  /* line 258, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 264, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .socials a:hover i::before, .socials a:focus-visible i::before {
     filter: var(--filter-magenta); }
-  /* line 262, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 268, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .socials a i {
     display: block;
     width: 45px;
@@ -252,7 +257,7 @@ body {
     border-radius: var(--border-radius);
     background-color: var(--col-primary);
     transition: 0.35s ease; }
-    /* line 271, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    /* line 277, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .socials a i::before {
       content: "";
       display: block;
@@ -262,26 +267,26 @@ body {
       background-position: center;
       background-repeat: no-repeat;
       transition: 0.35s ease; }
-  /* line 284, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 290, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .socials a.linked-in i::before {
     background-image: url("../assets/icons8-linkedin.svg"); }
-  /* line 290, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 296, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .socials a.insta i::before {
     background-image: url("../assets/icons8-instagram.svg"); }
-  /* line 296, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 302, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .socials a.cults i::before {
     background-image: url("../assets/icons8-code-blocks.svg"); }
-  /* line 302, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 308, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .socials a.github i::before {
     background-image: url("../assets/icons8-github.svg"); }
-  /* line 306, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 312, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .socials a.email {
     padding: 0; }
-    /* line 308, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    /* line 314, ../../../../xampp/htdocs/resume/scss/styles.scss */
     .socials a.email i::before {
       background-image: url("../assets/icons8-gmail-logo.svg"); }
 
-/* line 314, ../../../../xampp/htdocs/resume/scss/styles.scss */
+/* line 320, ../../../../xampp/htdocs/resume/scss/styles.scss */
 .email {
   margin-top: 20px;
   border: 1px solid #000;
@@ -291,129 +296,127 @@ body {
   background-color: var(--col-primary);
   text-transform: uppercase;
   transition: 0.35s ease; }
-  /* line 324, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  /* line 330, ../../../../xampp/htdocs/resume/scss/styles.scss */
   .email:hover, .email:focus-visible {
     text-decoration: none;
     border-color: var(--col-magenta);
     color: var(--col-magenta); }
 
-/* line 332, ../../../../xampp/htdocs/resume/scss/styles.scss */
-.main {
-  scroll-behavior: smooth; }
-  /* line 335, ../../../../xampp/htdocs/resume/scss/styles.scss */
-  .main .hero {
+/* line 340, ../../../../xampp/htdocs/resume/scss/styles.scss */
+.main .hero {
+  position: relative;
+  height: 100dvh;
+  background-color: var(--col-primary);
+  overflow: clip; }
+  /* line 346, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  .main .hero .bg-words {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 85%;
+    height: 100%; }
+    /* line 353, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    .main .hero .bg-words div {
+      font-weight: 700; }
+  /* line 357, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  .main .hero .kbFlex {
     position: relative;
-    height: 100dvh;
-    background-color: var(--col-primary);
-    overflow: clip; }
-    /* line 341, ../../../../xampp/htdocs/resume/scss/styles.scss */
-    .main .hero .bg-words {
-      position: absolute;
-      top: 0;
-      left: 15%;
-      width: 85%;
-      height: 100%; }
-      /* line 348, ../../../../xampp/htdocs/resume/scss/styles.scss */
-      .main .hero .bg-words div {
-        font-weight: 700; }
-    /* line 352, ../../../../xampp/htdocs/resume/scss/styles.scss */
-    .main .hero .kbFlex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    /* line 365, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    .main .hero .kbFlex .empty {
+      width: 21%; }
+    /* line 369, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    .main .hero .kbFlex .details {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      /* line 373, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      .main .hero .kbFlex .details h1 {
+        text-align: center;
+        font-size: 4rem; }
+      /* line 378, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      .main .hero .kbFlex .details .sub-title {
+        text-align: center;
+        font-size: 1.5rem; }
+    /* line 384, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    .main .hero .kbFlex .img-wrapper {
+      width: 21%;
+      background-color: cyan; }
+
+/* line 394, ../../../../xampp/htdocs/resume/scss/styles.scss */
+.main .accolades .kbGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px; }
+  /* line 399, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  .main .accolades .kbGrid .item {
+    padding: 10px 25px;
+    border-radius: var(--border-radius);
+    transform: translateY(100px);
+    opacity: 0; }
+    /* line 405, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    .main .accolades .kbGrid .item.active {
+      transform: translateY(0);
+      opacity: 1; }
+    /* line 410, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    .main .accolades .kbGrid .item h2 {
+      margin: 0; }
+  /* line 416, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  .main .accolades .kbGrid.top .item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background-color: var(--col-primary); }
+    /* line 424, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    .main .accolades .kbGrid.top .item:nth-child(1) {
+      transition: 0.35s ease; }
+    /* line 428, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    .main .accolades .kbGrid.top .item:nth-child(2) {
+      transition: 0.35s ease 0.1s; }
+    /* line 432, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    .main .accolades .kbGrid.top .item:nth-child(3) {
+      transition: 0.35s ease 0.2s; }
+    /* line 436, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    .main .accolades .kbGrid.top .item .number-wrapper {
+      flex-shrink: 0;
       position: relative;
-      width: 100%;
-      height: 100%;
+      width: 75px;
+      height: 75px;
       display: flex;
       align-items: center;
-      justify-content: space-between; }
-      /* line 360, ../../../../xampp/htdocs/resume/scss/styles.scss */
-      .main .hero .kbFlex .empty {
-        width: 21%; }
-      /* line 364, ../../../../xampp/htdocs/resume/scss/styles.scss */
-      .main .hero .kbFlex .details {
-        display: flex;
-        flex-direction: column;
-        align-items: center; }
-        /* line 368, ../../../../xampp/htdocs/resume/scss/styles.scss */
-        .main .hero .kbFlex .details h1 {
-          text-align: center;
-          font-size: 4rem; }
-        /* line 373, ../../../../xampp/htdocs/resume/scss/styles.scss */
-        .main .hero .kbFlex .details .sub-title {
-          text-align: center;
-          font-size: 1.5rem; }
-      /* line 379, ../../../../xampp/htdocs/resume/scss/styles.scss */
-      .main .hero .kbFlex .img-wrapper {
-        width: 21%;
-        background-color: cyan; }
-  /* line 389, ../../../../xampp/htdocs/resume/scss/styles.scss */
-  .main .accolades .kbGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px; }
-    /* line 394, ../../../../xampp/htdocs/resume/scss/styles.scss */
-    .main .accolades .kbGrid .item {
-      padding: 10px 25px;
-      border-radius: var(--border-radius);
-      transform: translateY(100px);
-      opacity: 0; }
-      /* line 400, ../../../../xampp/htdocs/resume/scss/styles.scss */
-      .main .accolades .kbGrid .item.active {
-        transform: translateY(0);
-        opacity: 1; }
-      /* line 405, ../../../../xampp/htdocs/resume/scss/styles.scss */
-      .main .accolades .kbGrid .item h2 {
-        margin: 0; }
-    /* line 411, ../../../../xampp/htdocs/resume/scss/styles.scss */
-    .main .accolades .kbGrid.top .item {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-      background-color: var(--col-primary); }
-      /* line 419, ../../../../xampp/htdocs/resume/scss/styles.scss */
-      .main .accolades .kbGrid.top .item:nth-child(1) {
-        transition: 0.35s ease; }
-      /* line 423, ../../../../xampp/htdocs/resume/scss/styles.scss */
-      .main .accolades .kbGrid.top .item:nth-child(2) {
-        transition: 0.35s ease 0.1s; }
-      /* line 427, ../../../../xampp/htdocs/resume/scss/styles.scss */
-      .main .accolades .kbGrid.top .item:nth-child(3) {
-        transition: 0.35s ease 0.2s; }
-      /* line 431, ../../../../xampp/htdocs/resume/scss/styles.scss */
-      .main .accolades .kbGrid.top .item .number-wrapper {
-        flex-shrink: 0;
-        position: relative;
-        width: 75px;
-        height: 75px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        isolation: isolate; }
-        /* line 441, ../../../../xampp/htdocs/resume/scss/styles.scss */
-        .main .accolades .kbGrid.top .item .number-wrapper::before {
-          content: "";
-          position: absolute;
-          display: block;
-          width: 70px;
-          height: 70px;
-          border-radius: 50%;
-          background-color: var(--col-primary);
-          z-index: 0; }
-        /* line 452, ../../../../xampp/htdocs/resume/scss/styles.scss */
-        .main .accolades .kbGrid.top .item .number-wrapper::after {
-          content: "";
-          position: absolute;
-          display: block;
-          width: 76px;
-          height: 76px;
-          border-radius: 50%;
-          background: conic-gradient(var(--col-magenta) 0%, var(--col-magenta) calc(var(--rotation) - 0.5deg), var(--col-primary) calc(var(--rotation) + 0.5deg), var(--col-primary) 100%);
-          z-index: -1;
-          transform-origin: center;
-          transform: rotate(var(--rotation)); }
-        /* line 471, ../../../../xampp/htdocs/resume/scss/styles.scss */
-        .main .accolades .kbGrid.top .item .number-wrapper[data-percent="100"]::after {
-          animation: glow-num 1s ease; }
+      justify-content: center;
+      isolation: isolate; }
+      /* line 446, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      .main .accolades .kbGrid.top .item .number-wrapper::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: var(--col-primary);
+        z-index: 0; }
+      /* line 457, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      .main .accolades .kbGrid.top .item .number-wrapper::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        background: conic-gradient(var(--col-magenta) 0%, var(--col-magenta) calc(var(--rotation) - 0.5deg), var(--col-primary) calc(var(--rotation) + 0.5deg), var(--col-primary) 100%);
+        z-index: -1;
+        transform-origin: center;
+        transform: rotate(var(--rotation)); }
+      /* line 476, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      .main .accolades .kbGrid.top .item .number-wrapper[data-percent="100"]::after {
+        animation: glow-num 1s ease; }
 
 @keyframes glow-num {
   0% {
@@ -422,55 +425,56 @@ body {
     box-shadow: 0 0 20px 0 var(--col-magenta); }
   100% {
     box-shadow: 0 0 0 0 var(--col-magenta); } }
-        /* line 489, ../../../../xampp/htdocs/resume/scss/styles.scss */
-        .main .accolades .kbGrid.top .item .number-wrapper.reverse::after {
-          transform: scaleY(-1) rotate(var(--rotation)); }
-        /* line 494, ../../../../xampp/htdocs/resume/scss/styles.scss */
-        .main .accolades .kbGrid.top .item .number-wrapper .number {
-          position: relative;
-          font-size: 2rem;
-          font-weight: 500;
-          z-index: 1; }
-    /* line 504, ../../../../xampp/htdocs/resume/scss/styles.scss */
-    .main .accolades .kbGrid.bot {
-      margin-top: 25px; }
-      /* line 506, ../../../../xampp/htdocs/resume/scss/styles.scss */
-      .main .accolades .kbGrid.bot .item {
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25); }
-        /* line 508, ../../../../xampp/htdocs/resume/scss/styles.scss */
-        .main .accolades .kbGrid.bot .item:nth-child(1) {
-          transition: 0.35s ease 1s; }
-        /* line 512, ../../../../xampp/htdocs/resume/scss/styles.scss */
-        .main .accolades .kbGrid.bot .item:nth-child(2) {
-          transition: 0.35s ease 1.1s; }
-        /* line 516, ../../../../xampp/htdocs/resume/scss/styles.scss */
-        .main .accolades .kbGrid.bot .item:nth-child(3) {
-          transition: 0.35s ease 1.2s; }
-        /* line 522, ../../../../xampp/htdocs/resume/scss/styles.scss */
-        .main .accolades .kbGrid.bot .item.active:nth-child(1) img {
-          animation: grow-img 1s ease 2s; }
-        /* line 528, ../../../../xampp/htdocs/resume/scss/styles.scss */
-        .main .accolades .kbGrid.bot .item.active:nth-child(2) img {
-          animation: grow-img 1s ease 2.5s; }
-        /* line 534, ../../../../xampp/htdocs/resume/scss/styles.scss */
-        .main .accolades .kbGrid.bot .item.active:nth-child(3) img {
-          animation: grow-img 1s ease 3s; }
+      /* line 494, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      .main .accolades .kbGrid.top .item .number-wrapper.reverse::after {
+        transform: scaleY(-1) rotate(var(--rotation)); }
+      /* line 499, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      .main .accolades .kbGrid.top .item .number-wrapper .number {
+        position: relative;
+        font-size: 2rem;
+        font-weight: 500;
+        z-index: 1; }
+  /* line 509, ../../../../xampp/htdocs/resume/scss/styles.scss */
+  .main .accolades .kbGrid.bot {
+    margin-top: 25px; }
+    /* line 511, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    .main .accolades .kbGrid.bot .item {
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25); }
+      /* line 513, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      .main .accolades .kbGrid.bot .item:nth-child(1) {
+        transition: 0.35s ease 1s; }
+      /* line 517, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      .main .accolades .kbGrid.bot .item:nth-child(2) {
+        transition: 0.35s ease 1.1s; }
+      /* line 521, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      .main .accolades .kbGrid.bot .item:nth-child(3) {
+        transition: 0.35s ease 1.2s; }
+      /* line 527, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      .main .accolades .kbGrid.bot .item.active:nth-child(1) img {
+        animation: grow-img 1s ease 2s; }
+      /* line 533, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      .main .accolades .kbGrid.bot .item.active:nth-child(2) img {
+        animation: grow-img 1s ease 2.5s; }
+      /* line 539, ../../../../xampp/htdocs/resume/scss/styles.scss */
+      .main .accolades .kbGrid.bot .item.active:nth-child(3) img {
+        animation: grow-img 1s ease 3s; }
 
 @keyframes grow-img {
   50% {
     scale: 1.1; } }
-      /* line 545, ../../../../xampp/htdocs/resume/scss/styles.scss */
-      .main .accolades .kbGrid.bot .img-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center; }
-      /* line 550, ../../../../xampp/htdocs/resume/scss/styles.scss */
-      .main .accolades .kbGrid.bot h2 {
-        font-family: var(--robo-con);
-        font-weight: 300; }
-  /* line 558, ../../../../xampp/htdocs/resume/scss/styles.scss */
-  .main .anchor {
-    position: relative;
-    top: -150px; }
+    /* line 550, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    .main .accolades .kbGrid.bot .img-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    /* line 555, ../../../../xampp/htdocs/resume/scss/styles.scss */
+    .main .accolades .kbGrid.bot h2 {
+      font-family: var(--robo-con);
+      font-weight: 300; }
+
+/* line 563, ../../../../xampp/htdocs/resume/scss/styles.scss */
+.main .anchor {
+  position: relative;
+  top: -150px; }
 
 /*# sourceMappingURL=styles.css.map */
