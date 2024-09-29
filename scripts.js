@@ -221,6 +221,58 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 })();
 
+/**
+ * Accolade disappear GSAP
+ */
+(() => {
+  const accolades = document.querySelector('.accolades');
+  gsap.to(accolades, {
+    scrollTrigger: {
+      trigger: accolades,
+      start: '25% top',
+      end: '100% top',
+      scrub: 1,
+    },
+    y: -100,
+    opacity: 0,
+  });
+})();
+
+/**
+ * about me anchor click
+ */
+(() => {
+  const aboutMeAnchor = document.querySelector('.about-me a');
+  if (aboutMeAnchor) {
+    aboutMeAnchor.addEventListener('click', (e) => {
+      e.preventDefault();
+      const aboutMeImage = document.querySelector('.about-me .img-wrapper');
+      aboutMeImage.classList.add('active');
+      setTimeout(() => {
+        aboutMeImage.classList.remove('active');
+      }, 2000);
+    });
+  }
+})();
+
+/**
+ * about me GSAP
+ */
+(() => {
+  const aboutMe = document.querySelector('.about-me');
+  gsap.from(aboutMe.querySelectorAll('.text-section > *'), {
+    scrollTrigger: {
+      trigger: aboutMe,
+      start: '50% bottom',
+      end: '100% bottom',
+      scrub: 1,
+    },
+    y: 100,
+    opacity: 0,
+    stagger: 0.1,
+  });
+})();
+
 // new Splide('#splide').mount();
 
 // gsap.to('#splide', {

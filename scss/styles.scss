@@ -25,16 +25,16 @@ body {
   .font-space { font-family: var(--space); }
   .p-default { padding-block: var(--spacing); }
   .p-top-default { padding-top: var(--spacing); }
-  .p-bottom-default { padding-bottom: var(--spacing); }
+  .p-bot-default { padding-bottom: var(--spacing); }
   .p-half { padding-block: var(--spacing) / 2; }
   .p-top-half { padding-top: var(--spacing) / 2; }
-  .p-bottom-half { padding-bottom: var(--spacing) / 2; }
+  .p-bot-half { padding-bottom: var(--spacing) / 2; }
   .m-default { margin-block: var(--spacing); }
   .m-top-default { margin-top: var(--spacing); }
-  .m-bottom-default { margin-bottom: var(--spacing); }
+  .m-bot-default { margin-bottom: var(--spacing); }
   .m-half { margin-block: var(--spacing) / 2; }
   .m-top-half { margin-top: var(--spacing) / 2; }
-  .m-bottom-half { margin-bottom: var(--spacing) / 2; }
+  .m-bot-half { margin-bottom: var(--spacing) / 2; }
 }
 
 html {
@@ -566,6 +566,56 @@ body {
   }
 
   .about-me {
+    .kbFlex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
 
+      .text-section {
+       flex-grow: 1;
+        .h2 {
+          cursor: pointer;
+          display: block;
+          margin-bottom: 25px;
+          color: #000;
+
+          &:hover,
+          &:focus-visible {
+            text-decoration: none;
+
+            span::after {
+              background-color: var(--col-magenta);
+            }
+          }
+
+          span {
+            position: relative;
+            display: inline-block;
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: -5px;
+              display: block;
+              width: 100%;
+              height: 3px;
+              background-color: var(--text-color);
+              transition: 0.35s ease;
+            }
+          }
+        }
+      }
+
+      .img-wrapper {
+        flex-shrink: 0;
+        width: 40%;
+        background-color: cyan;
+
+        &.active {
+          background-color: red;
+        }
+      }
+    }
   }
 }
